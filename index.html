@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il 63° Compleanno di Rosanna | Invito Ufficiale</title>
+  <!-- Google Fonts: Playfair Display per i titoli, Outfit per il testo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Language Switcher in the top right corner -->
+  <div class="lang-switcher">
+    <button id="lang-btn" class="lang-button" data-lang="it">
+      <span class="flag-icon">🇫🇷</span>
+      <span class="lang-text">FR</span>
+    </button>
+  </div>
+
+  <!-- Background Decorative Shapes & Roses -->
+  <div class="decor-shape shape-1"></div>
+  <div class="decor-shape shape-2"></div>
+  
+  <div class="floating-rose rose-top-left">
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor">
+      <path d="M32 20c-2.5-3.5-8-4-10-1c-2.5 3.5 0 8.5 4 11.5l6 4.5 6-4.5c4-3 6.5-8 4-11.5-2-3-7.5-2.5-10 1z"/>
+      <path d="M32 24c-1.5-2-4.5-2.5-6-.5-1.5 2 0 5 2.5 7l3.5 2.5 3.5-2.5c2.5-2 4-5 2.5-7-1.5-2-4.5-1.5-6 .5z"/>
+      <path d="M32 28c-.8-1-2.2-1.2-3-.2-.8 1 0 2.5 1.2 3.5l1.8 1.2 1.8-1.2c1.2-1 2-2.5 1.2-3.5-.8-1-2.2-.8-3 .2z"/>
+      <path d="M32 37v20M32 44c-3-1-7-1-9 2 2 3 6 3 9-2zM32 49c3-1 7-1 9 2-2 3-6 3-9-2z"/>
+    </svg>
+  </div>
+  <div class="floating-rose rose-bottom-right">
+    <svg viewBox="0 0 64 64" fill="none" stroke="currentColor">
+      <path d="M32 20c-2.5-3.5-8-4-10-1c-2.5 3.5 0 8.5 4 11.5l6 4.5 6-4.5c4-3 6.5-8 4-11.5-2-3-7.5-2.5-10 1z"/>
+      <path d="M32 24c-1.5-2-4.5-2.5-6-.5-1.5 2 0 5 2.5 7l3.5 2.5 3.5-2.5c2.5-2 4-5 2.5-7-1.5-2-4.5-1.5-6 .5z"/>
+      <path d="M32 28c-.8-1-2.2-1.2-3-.2-.8 1 0 2.5 1.2 3.5l1.8 1.2 1.8-1.2c1.2-1 2-2.5 1.2-3.5-.8-1-2.2-.8-3 .2z"/>
+      <path d="M32 37v20M32 44c-3-1-7-1-9 2 2 3 6 3 9-2zM32 49c3-1 7-1 9 2-2 3-6 3-9-2z"/>
+    </svg>
+  </div>
+
+  <!-- Main Container -->
+  <div class="app-container">
+
+    <!-- Hero / Header Section -->
+    <header class="hero-section">
+      <div class="rose-emblem">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor">
+          <path d="M32 20c-2.5-3.5-8-4-10-1c-2.5 3.5 0 8.5 4 11.5l6 4.5 6-4.5c4-3 6.5-8 4-11.5-2-3-7.5-2.5-10 1z"/>
+          <path d="M32 24c-1.5-2-4.5-2.5-6-.5-1.5 2 0 5 2.5 7l3.5 2.5 3.5-2.5c2.5-2 4-5 2.5-7-1.5-2-4.5-1.5-6 .5z"/>
+          <path d="M32 28c-.8-1-2.2-1.2-3-.2-.8 1 0 2.5 1.2 3.5l1.8 1.2 1.8-1.2c1.2-1 2-2.5 1.2-3.5-.8-1-2.2-.8-3 .2z"/>
+          <path d="M32 37v15M32 42c-3-1-7-1-9 2 2 3 6 3 9-2zM32 47c3-1 7-1 9 2-2 3-6 3-9-2z"/>
+        </svg>
+      </div>
+      <div class="celebration-badge" data-i18n="badge">✨ 18 OTTOBRE 2026 ✨</div>
+      <h1 class="main-title">Rosanna</h1>
+      <p class="subtitle" data-i18n="subtitle">Festeggia con me il mio 63° Compleanno</p>
+      
+      <!-- Countdown Timer -->
+      <div class="countdown-container">
+        <div class="countdown-card">
+          <span class="countdown-val" id="days">00</span>
+          <span class="countdown-lbl" data-i18n="lblDays">Giorni</span>
+        </div>
+        <div class="countdown-card">
+          <span class="countdown-val" id="hours">00</span>
+          <span class="countdown-lbl" data-i18n="lblHours">Ore</span>
+        </div>
+        <div class="countdown-card">
+          <span class="countdown-val" id="minutes">00</span>
+          <span class="countdown-lbl" data-i18n="lblMinutes">Minuti</span>
+        </div>
+        <div class="countdown-card">
+          <span class="countdown-val" id="seconds">00</span>
+          <span class="countdown-lbl" data-i18n="lblSeconds">Secondi</span>
+        </div>
+      </div>
+
+      <a href="#rsvp" class="cta-button scroll-link" data-i18n="ctaButton">Conferma Presenza</a>
+    </header>
+
+    <!-- Event Details Section -->
+    <section class="details-section" id="details">
+      <h2 class="section-title" data-i18n="detailsTitle">I Dettagli dell'Evento</h2>
+      
+      <div class="details-grid">
+        <!-- Date Card -->
+        <div class="detail-card glass-card">
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+            <h3 data-i18n="quandoTitle">Quando</h3>
+            <p id="event-date-text" data-i18n="quandoDate">Domenica 18 Ottobre 2026</p>
+            <p class="detail-sub" data-i18n="quandoSub">Dalle ore 13:00 alle 17:00</p>
+          </div>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Il+63%C2%B0+Compleanno+di+Rosanna&dates=20261018T110000Z%2F20261018T150000Z&details=Festeggiamo+insieme+il+63%C2%B0+compleanno+di+Rosanna%21+Ricordati+di+dare+conferma+sul+sito.&location=Sala+Ricevimenti+Donna+Giulia%2C+Contrada+Vagone%2C+345%2C+70043+Monopoli+BA" target="_blank" class="map-link" data-i18n="calendarBtn">Aggiungi al Calendario</a>
+        </div>
+
+        <!-- Location Card -->
+        <div class="detail-card glass-card">
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 data-i18n="doveTitle">Dove</h3>
+            <p id="location-name">Sala Ricevimenti Donna Giulia</p>
+            <p class="detail-sub" id="location-address">Contrada Vagone, 345, Monopoli BA</p>
+            <p class="location-notes" id="location-notes" data-i18n="locationNotes">La location è stata confermata! Clicca di seguito per visualizzare la mappa.</p>
+          </div>
+          <a href="https://maps.google.com/?q=Sala+Ricevimenti+Donna+Giulia+Monopoli" id="location-map-btn" target="_blank" class="map-link" data-i18n="mapBtn">Visualizza Mappa</a>
+        </div>
+
+        <!-- Dress Code Card -->
+        <div class="detail-card glass-card">
+          <div class="card-content">
+            <div class="card-icon">👔</div>
+            <h3 data-i18n="dressCodeTitle">Dress Code</h3>
+            <p id="dress-code-text" data-i18n="dressCodeVal">Elegante</p>
+            <p class="detail-sub" data-i18n="dressCodeSub">È gradito l'abito elegante</p>
+          </div>
+          <div class="map-link-placeholder"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP Invitation Form -->
+    <section class="rsvp-section" id="rsvp">
+      <div class="rsvp-card glass-card">
+        <h2 class="card-title" data-i18n="rsvpTitle">Sarai dei Nostri?</h2>
+        <p class="card-subtitle" data-i18n="rsvpSubtitle">Ti chiediamo gentilmente di dare conferma entro il <strong id="rsvp-deadline-text">15 Settembre 2026</strong> per permetterci di organizzare al meglio.</p>
+        
+        <form id="rsvp-form" class="rsvp-form">
+          <div class="form-group">
+            <label for="guest-name" data-i18n="labelName">Nome e Cognome</label>
+            <input type="text" id="guest-name" required placeholder="Inserisci il tuo nome completo" data-i18n="placeholderName">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="attendance" data-i18n="labelAttendance">Parteciperai?</label>
+              <select id="attendance" required>
+                <option value="yes" selected data-i18n="optionYes">Sì, con piacere!</option>
+                <option value="no" data-i18n="optionNo">Purtroppo non potrò esserci</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="guests-count-group">
+              <label for="guests-count" data-i18n="labelGuests">Numero di Persone</label>
+              <input type="number" id="guests-count" min="1" max="10" value="1">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label data-i18n="labelAllergies">Hai intolleranze o allergie alimentari?</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="has-allergies" value="no" checked>
+                <span data-i18n="radioNo">No, nessuna</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="has-allergies" value="yes">
+                <span data-i18n="radioYes">Sì, ho intolleranze / allergie</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group hidden" id="diet-group">
+            <label for="diet-requirements" data-i18n="labelDiet">Specificare allergie o esigenze alimentari:</label>
+            <textarea id="diet-requirements" rows="2" placeholder="Es. Celiaco (senza glutine), intollerante al lattosio, vegetariano, ecc." data-i18n="placeholderDiet"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="guest-notes" data-i18n="labelNotes">Messaggio o Note speciali</label>
+            <textarea id="guest-notes" rows="2" placeholder="Un messaggio di auguri per Rosanna..." data-i18n="placeholderNotes"></textarea>
+          </div>
+
+          <button type="submit" class="submit-button" data-i18n="submitBtn">Salva e Conferma</button>
+        </form>
+
+        <!-- Post RSVP info container -->
+        <div id="rsvp-success" class="rsvp-success hidden">
+          <div class="success-icon">🎉</div>
+          <h3 data-i18n="successTitle">Grazie per la tua risposta!</h3>
+          <p id="rsvp-summary-text"></p>
+          <div class="success-actions">
+            <button id="send-whatsapp-btn" class="whatsapp-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.907h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.294c-.202-.1-.1.198-.073.348-.386-.19-.747-.373-1.012-.5-.264-.127-.456-.19-.648.096-.19.286-.738.93-.904 1.124-.166.19-.33.21-.531.11-.202-.1-.852-.314-1.623-.997-.6-.533-1.005-1.193-1.123-1.395-.118-.202-.012-.31.088-.41.09-.09.202-.238.303-.356.101-.118.135-.202.203-.338.067-.136.034-.254-.017-.356-.05-.1-.456-1.1-.624-1.506-.164-.398-.333-.344-.456-.35-.118-.006-.254-.007-.39-.007a.75.75 0 0 0-.544.254c-.187.202-.713.697-.713 1.7s.73 1.97 1.83 2.1c1.1.135 1.97-.245 2.12-.416.15-.17.15-.224.15-.327s-.05-.18-.252-.28z"/></svg>
+              <span data-i18n="whatsappBtn">Invia su WhatsApp a Rosanna</span>
+            </button>
+            <button id="change-rsvp-btn" class="text-button" data-i18n="changeRsvpBtn">Modifica risposta</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p data-i18n="footerText">Creato con amore per il 63° compleanno di Rosanna.</p>
+      <p class="footer-note" data-i18n="footerNote">Sito Invito Digitale &copy; 2026 - Agenzia Geniale</p>
+    </footer>
+
+  </div>
+
+  <!-- Script Configuration & Main Logic -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
