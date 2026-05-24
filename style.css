@@ -295,10 +295,10 @@ body {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin: -25px auto 45px; /* Pulled up by -25px to overlap the bottom of the photo */
+  margin: 30px auto 45px; /* Changed from negative to positive margin to remove overlap */
   max-width: 500px;
   position: relative;
-  z-index: 3; /* Floating above the photo container */
+  z-index: 3;
   animation: fadeInUp 1s ease-out 0.4s both;
 }
 
