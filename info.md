@@ -1,4 +1,4 @@
-# Profilo Cliente: Rosanna Lussemburgo (Sito Invito 63° Compleanno)
+# Profilo Cliente: SIMONE Martina Rosa (Sito Invito 63° Compleanno)
 
 Questo documento contiene tutte le informazioni, il tono di voce e le regole per la scrittura di copy e contenuti per questo specifico cliente. È strutturato in modo da essere leggibile da qualsiasi agente AI o editor markdown (come Obsidian, VS Code, ecc.).
 
@@ -8,17 +8,17 @@ Questo documento contiene tutte le informazioni, il tono di voce e le regole per
 * **Sito Web:** In fase di creazione (Invito Digitale)
 * **Link Social:** N/D
 * **Contatti utili nel copy:**
-  * Telefono/WhatsApp di Rosanna: +39 345 678 9012 (Numero dimostrativo, da configurare in `config.js`)
+  * Telefono/WhatsApp di SIMONE Martina Rosa: +39 345 678 9012 (Numero dimostrativo, da configurare in `config.js`)
 * **Dettagli Evento:**
   * **Data:** Domenica 18 Ottobre 2026
-  * **Occasione:** 63° Compleanno di Rosanna
+  * **Occasione:** 63° Compleanno di SIMONE Martina Rosa
   * **Location:** Da confermare (TBC)
 
 ---
 
 ## 🎯 Identità del Brand & Target
 * **Cosa offre il sito:** Un invito digitale interattivo, elegante e moderno, che consente agli invitati di visualizzare i dettagli dell'evento, fare il conto alla rovescia, confermare la presenza (RSVP) specificando il numero di ospiti, ed eventualmente inviare la risposta direttamente via WhatsApp.
-* **Chi è il cliente tipo (Target):** Parenti, amici stretti e conoscenti di Rosanna. L'età varia dai giovani ai senior, quindi l'usabilità del sito deve essere estremamente semplice ed intuitiva.
+* **Chi è il cliente tipo (Target):** Parenti, amici stretti e conoscenti di SIMONE Martina Rosa. L'età varia dai giovani ai senior, quindi l'usabilità del sito deve essere estremamente semplice ed intuitiva.
 * **Punto di forza unico (USP):** Un invito di classe che sostituisce il classico biglietto cartaceo con un'esperienza digitale raffinata (vetrina fotografica, conto alla rovescia animato, risposta in un clic).
 
 ---

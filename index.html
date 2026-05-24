@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il 63° Compleanno di Rosanna | Invito Ufficiale</title>
-  <!-- Google Fonts: Playfair Display per i titoli, Outfit per il testo -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Il 63° Compleanno di SIMONE Martina Rosa | Invito Ufficiale</title>
+  <!-- Local Fonts loaded via style.css -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -55,8 +52,14 @@
         </svg>
       </div>
       <div class="celebration-badge" data-i18n="badge">✨ 18 OTTOBRE 2026 ✨</div>
-      <h1 class="main-title">Rosanna</h1>
+      <h1 class="main-title">SIMONE Martina Rosa</h1>
       <p class="subtitle" data-i18n="subtitle">Festeggia con me il mio 63° Compleanno</p>
+
+      <!-- Celebrant Portrait -->
+      <div class="hero-image-container">
+        <img src="assets/simone.jpg" alt="SIMONE Martina Rosa" class="hero-image">
+        <div class="hero-image-overlay"></div>
+      </div>
       
       <!-- Countdown Timer -->
       <div class="countdown-container">
@@ -96,7 +99,7 @@
             <p id="event-date-text" data-i18n="quandoDate">Domenica 18 Ottobre 2026</p>
             <p class="detail-sub" data-i18n="quandoSub">Dalle ore 13:00 alle 17:00</p>
           </div>
-          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Il+63%C2%B0+Compleanno+di+Rosanna&dates=20261018T110000Z%2F20261018T150000Z&details=Festeggiamo+insieme+il+63%C2%B0+compleanno+di+Rosanna%21+Ricordati+di+dare+conferma+sul+sito.&location=Sala+Ricevimenti+Donna+Giulia%2C+Contrada+Vagone%2C+345%2C+70043+Monopoli+BA" target="_blank" class="map-link" data-i18n="calendarBtn">Aggiungi al Calendario</a>
+          <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Il+63%C2%B0+Compleanno+di+SIMONE+Martina+Rosa&dates=20261018T110000Z%2F20261018T150000Z&details=Festeggiamo+insieme+il+63%C2%B0+compleanno+di+SIMONE+Martina+Rosa%21+Ricordati+di+dare+conferma+sul+sito.&location=Sala+Ricevimenti+Donna+Giulia%2C+Contrada+Vagone%2C+345%2C+70043+Monopoli+BA%2C+Italia" target="_blank" class="map-link" data-i18n="calendarBtn">Aggiungi al Calendario</a>
         </div>
 
         <!-- Location Card -->
@@ -107,7 +110,7 @@
             </div>
             <h3 data-i18n="doveTitle">Dove</h3>
             <p id="location-name">Sala Ricevimenti Donna Giulia</p>
-            <p class="detail-sub" id="location-address">Contrada Vagone, 345, Monopoli BA</p>
+            <p class="detail-sub" id="location-address">Contrada Vagone, 345, Monopoli BA, Italia</p>
             <p class="location-notes" id="location-notes" data-i18n="locationNotes">La location è stata confermata! Clicca di seguito per visualizzare la mappa.</p>
           </div>
           <a href="https://maps.google.com/?q=Sala+Ricevimenti+Donna+Giulia+Monopoli" id="location-map-btn" target="_blank" class="map-link" data-i18n="mapBtn">Visualizza Mappa</a>
@@ -116,7 +119,12 @@
         <!-- Dress Code Card -->
         <div class="detail-card glass-card">
           <div class="card-content">
-            <div class="card-icon">👔</div>
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 5l4 3 4-3-1 5 4 11H5l4-11L8 5z"></path>
+                <path d="M9 10h6"></path>
+              </svg>
+            </div>
             <h3 data-i18n="dressCodeTitle">Dress Code</h3>
             <p id="dress-code-text" data-i18n="dressCodeVal">Elegante</p>
             <p class="detail-sub" data-i18n="dressCodeSub">È gradito l'abito elegante</p>
@@ -174,7 +182,7 @@
 
           <div class="form-group">
             <label for="guest-notes" data-i18n="labelNotes">Messaggio o Note speciali</label>
-            <textarea id="guest-notes" rows="2" placeholder="Un messaggio di auguri per Rosanna..." data-i18n="placeholderNotes"></textarea>
+            <textarea id="guest-notes" rows="2" placeholder="Un messaggio di auguri per SIMONE Martina Rosa..." data-i18n="placeholderNotes"></textarea>
           </div>
 
           <button type="submit" class="submit-button" data-i18n="submitBtn">Salva e Conferma</button>
@@ -188,7 +196,7 @@
           <div class="success-actions">
             <button id="send-whatsapp-btn" class="whatsapp-button">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.907h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.294c-.202-.1-.1.198-.073.348-.386-.19-.747-.373-1.012-.5-.264-.127-.456-.19-.648.096-.19.286-.738.93-.904 1.124-.166.19-.33.21-.531.11-.202-.1-.852-.314-1.623-.997-.6-.533-1.005-1.193-1.123-1.395-.118-.202-.012-.31.088-.41.09-.09.202-.238.303-.356.101-.118.135-.202.203-.338.067-.136.034-.254-.017-.356-.05-.1-.456-1.1-.624-1.506-.164-.398-.333-.344-.456-.35-.118-.006-.254-.007-.39-.007a.75.75 0 0 0-.544.254c-.187.202-.713.697-.713 1.7s.73 1.97 1.83 2.1c1.1.135 1.97-.245 2.12-.416.15-.17.15-.224.15-.327s-.05-.18-.252-.28z"/></svg>
-              <span data-i18n="whatsappBtn">Invia su WhatsApp a Rosanna</span>
+              <span data-i18n="whatsappBtn">Invia su WhatsApp a SIMONE Martina Rosa</span>
             </button>
             <button id="change-rsvp-btn" class="text-button" data-i18n="changeRsvpBtn">Modifica risposta</button>
           </div>
@@ -198,8 +206,8 @@
 
     <!-- Footer -->
     <footer class="app-footer">
-      <p data-i18n="footerText">Creato con amore per il 63° compleanno di Rosanna.</p>
-      <p class="footer-note" data-i18n="footerNote">Sito Invito Digitale &copy; 2026 - Agenzia Geniale</p>
+      <p data-i18n="footerText">Creato con amore per il 63° compleanno di SIMONE Martina Rosa.</p>
+      <p class="footer-note" data-i18n="footerNote">Invito Digitale &copy; 2026 - Agenzia Geniale</p>
     </footer>
 
   </div>

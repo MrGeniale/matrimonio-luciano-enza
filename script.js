@@ -5,7 +5,7 @@ let currentLang = 'it';
 
 const TRANSLATIONS = {
   it: {
-    docTitle: "Il 63° Compleanno di Rosanna | Invito Ufficiale",
+    docTitle: "Il 63° Compleanno di SIMONE Martina Rosa | Invito Ufficiale",
     badge: "✨ 18 OTTOBRE 2026 ✨",
     subtitle: "Festeggia con me il mio 63° Compleanno",
     lblDays: "Giorni",
@@ -38,41 +38,41 @@ const TRANSLATIONS = {
     labelDiet: "Specificare allergie o esigenze alimentari:",
     placeholderDiet: "Es. Celiaco (senza glutine), intollerante al lattosio, vegetariano, ecc.",
     labelNotes: "Messaggio o Note speciali",
-    placeholderNotes: "Un messaggio di auguri per Rosanna...",
+    placeholderNotes: "Un messaggio di auguri per SIMONE Martina Rosa...",
     submitBtn: "Salva e Conferma",
     successTitle: "Grazie per la tua risposta!",
-    whatsappBtn: "Invia su WhatsApp a Rosanna",
+    whatsappBtn: "Invia su WhatsApp a SIMONE Martina Rosa",
     changeRsvpBtn: "Modifica risposta",
-    footerText: "Creato con amore per il 63° compleanno di Rosanna.",
-    footerNote: "Sito Invito Digitale &copy; 2026 - Agenzia Geniale",
+    footerText: "Creato con amore per il 63° compleanno di SIMONE Martina Rosa.",
+    footerNote: "Invito Digitale &copy; 2026 - Agenzia Geniale",
     // RSVP Dynamic Responses
     rsvpYesSummary: (guests) => `Hai confermato la tua presenza per <strong>${guests} person${guests > 1 ? 'e' : 'a'}</strong>.<br>Non vediamo l'ora di festeggiare insieme!`,
     rsvpNoSummary: "Hai risposto che purtroppo non potrai partecipare. Le tue note sono state salvate.",
     // WhatsApp templates
-    waYesHeader: "Ciao Rosanna! ✨ Ti confermo con piacere la mia presenza per il tuo 63° compleanno! 🥂\n\n",
-    waNoHeader: "Ciao Rosanna! ❤️ Ci tenevo a ringraziarti per l'invito al tuo 63° compleanno, ma purtroppo non potrò partecipare. Ti faccio tantissimi auguri di buon compleanno! 🎂✨\n\n",
+    waYesHeader: "Ciao SIMONE Martina Rosa! ✨ Ti confermo con piacere la mia presenza per il tuo 63° compleanno! 🥂\n\n",
+    waNoHeader: "Ciao SIMONE Martina Rosa! ❤️ Ci tenevo a ringraziarti per l'invito al tuo 63° compleanno, ma purtroppo non potrò partecipare. Ti faccio tantissimi auguri di buon compleanno! 🎂✨\n\n",
     waGuestLabel: "👤 Invitato: ",
     waCountLabel: "👥 Saremo in: ",
     waPersonPlural: "persone",
     waPersonSingular: "persona",
-    waAllergyLabel: "⚠️ Allergie/Intolleranze: ",
+    waAllergyLabel: "⚠️ Allergies/Intolleranze: ",
     waAllergyNone: "Nessuna",
     waAllergyTbc: "Sì (da concordare)",
     waMsgLabel: "📝 Messaggio: ",
     waMsgFromLabel: "👤 Da parte di: "
   },
   fr: {
-    docTitle: "Le 63ème Anniversaire de Rosanna | Invitation Officielle",
-    badge: "✨ 18 OCTOBRE 2026 ✨",
+    docTitle: "Le 63ème Anniversaire de SIMONE Martina Rosa | Invitation Officielle",
+    badge: "✨ 18 octobre 2026 ✨",
     subtitle: "Fêtez avec moi mon 63ème Anniversaire",
     lblDays: "Jours",
     lblHours: "Heures",
     lblMinutes: "Minutes",
     lblSeconds: "Secondes",
     ctaButton: "Confirmer la Présence",
-    detailsTitle: "Les Détails de l'Événement",
+    detailsTitle: "Les Détails de l'Évènement",
     quandoTitle: "Quand",
-    quandoDate: "Dimanche 18 Octobre 2026",
+    quandoDate: "Dimanche 18 octobre 2026",
     quandoSub: "De 13h00 à 17h00",
     calendarBtn: "Ajouter au Calendrier",
     doveTitle: "Où",
@@ -82,7 +82,7 @@ const TRANSLATIONS = {
     dressCodeVal: "Élégant",
     dressCodeSub: "Tenue élégante souhaitée",
     rsvpTitle: "Serez-vous des nôtres ?",
-    rsvpSubtitle: "Veuillez confirmer votre présence avant le <strong>15 Septembre 2026</strong> afin de nous permettre de nous organiser au mieux.",
+    rsvpSubtitle: "Veuillez confirmer votre présence avant le <strong>15 septembre 2026</strong> afin de nous permettre de nous organiser au mieux.",
     labelName: "Nom et Prénom",
     placeholderName: "Entrez votre nom complet",
     labelAttendance: "Allez-vous participer ?",
@@ -95,19 +95,19 @@ const TRANSLATIONS = {
     labelDiet: "Veuillez spécifier vos allergies ou exigences alimentaires :",
     placeholderDiet: "Ex. Cœliaque (sans gluten), intolérant au lactose, végétarien, etc.",
     labelNotes: "Message ou Notes spéciales",
-    placeholderNotes: "Un message de vœux pour Rosanna...",
+    placeholderNotes: "Un message de vœux pour SIMONE Martina Rosa...",
     submitBtn: "Enregistrer et Confirmer",
     successTitle: "Merci pour votre réponse !",
-    whatsappBtn: "Envoyer sur WhatsApp à Rosanna",
+    whatsappBtn: "Envoyer sur WhatsApp à SIMONE Martina Rosa",
     changeRsvpBtn: "Modifier la réponse",
-    footerText: "Créé avec amour pour le 63ème anniversaire de Rosanna.",
-    footerNote: "Site d'invitation digitale &copy; 2026 - Agenzia Geniale",
+    footerText: "Créé avec amour pour le 63ème anniversaire de SIMONE Martina Rosa.",
+    footerNote: "Invitation digitale &copy; 2026 - Agenzia Geniale",
     // RSVP Dynamic Responses
     rsvpYesSummary: (guests) => `Vous avez confirmé votre présence pour <strong>${guests} personne${guests > 1 ? 's' : ''}</strong>.<br>Nous avons hâte de faire la fête ensemble !`,
     rsvpNoSummary: "Vous avez répondu que vous ne pourrez malheureusement pas participer. Vos notes ont été enregistrées.",
     // WhatsApp templates
-    waYesHeader: "Salut Rosanna! ✨ C'est avec grand plaisir que je confirme ma présence pour ton 63ème anniversaire! 🥂\n\n",
-    waNoHeader: "Salut Rosanna! ❤️ Je voulais te remercier pour l'invitation à ton 63ème anniversaire, mais malheureusement je ne pourrai pas participer. Je te souhaite un excellent anniversaire! 🎂✨\n\n",
+    waYesHeader: "Salut SIMONE Martina Rosa! ✨ C'est avec grand plaisir que je confirme ma présence pour ton 63ème anniversaire! 🥂\n\n",
+    waNoHeader: "Salut SIMONE Martina Rosa! ❤️ Je voulais te remercier pour l'invitation à ton 63ème anniversaire, mais malheureusement je ne pourrai pas participer. Je te souhaite un excellent anniversaire! 🎂✨\n\n",
     waGuestLabel: "👤 Invité: ",
     waCountLabel: "👥 Nombre de personnes: ",
     waPersonPlural: "personnes",
@@ -170,7 +170,7 @@ function setLanguage(lang) {
   }
 
   // Refresh success screen message if RSVP is saved
-  const savedRSVP = localStorage.getItem('rsvp_rosanna_63');
+  const savedRSVP = localStorage.getItem('rsvp_simonemartinarosa_63');
   if (savedRSVP) {
     const data = JSON.parse(savedRSVP);
     const summaryText = document.getElementById('rsvp-summary-text');
@@ -295,7 +295,7 @@ function initRSVP() {
   });
 
   // Check for existing RSVP in localStorage
-  const savedRSVP = localStorage.getItem('rsvp_rosanna_63');
+  const savedRSVP = localStorage.getItem('rsvp_simonemartinarosa_63');
   if (savedRSVP) {
     const data = JSON.parse(savedRSVP);
     showSuccessScreen(data);
@@ -313,7 +313,7 @@ function initRSVP() {
     const notes = document.getElementById('guest-notes').value.trim();
 
     const rsvpData = { name, attendance, hasAllergies, guestsCount, diet, notes };
-    localStorage.setItem('rsvp_rosanna_63', JSON.stringify(rsvpData));
+    localStorage.setItem('rsvp_simonemartinarosa_63', JSON.stringify(rsvpData));
 
     showSuccessScreen(rsvpData);
     sendToWebhook(rsvpData);
@@ -325,7 +325,7 @@ function initRSVP() {
     form.classList.remove('hidden');
     
     // Pre-fill existing data
-    const savedRSVP = localStorage.getItem('rsvp_rosanna_63');
+    const savedRSVP = localStorage.getItem('rsvp_simonemartinarosa_63');
     if (savedRSVP) {
       const data = JSON.parse(savedRSVP);
       document.getElementById('guest-name').value = data.name;
@@ -354,7 +354,7 @@ function initRSVP() {
 
   // WhatsApp redirection message builder
   sendWhatsAppBtn.addEventListener('click', () => {
-    const savedRSVP = localStorage.getItem('rsvp_rosanna_63');
+    const savedRSVP = localStorage.getItem('rsvp_simonemartinarosa_63');
     if (!savedRSVP) return;
 
     const data = JSON.parse(savedRSVP);
