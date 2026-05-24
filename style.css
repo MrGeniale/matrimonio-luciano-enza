@@ -265,7 +265,7 @@ body {
   z-index: 2; /* Sits above subtitle, below countdown */
   transform: rotate(-2deg); /* Elegant rotation for a casual photo feel */
   transition: var(--transition-smooth);
-  animation: scaleUp 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: scaleUpHero 1s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 /* Gradient overlay from the bottom of the image */
@@ -820,6 +820,17 @@ select {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes scaleUpHero {
+  from {
+    opacity: 0;
+    transform: scale(0.95) rotate(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(-2deg);
   }
 }
 
