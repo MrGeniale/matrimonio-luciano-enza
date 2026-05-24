@@ -235,7 +235,7 @@ body {
 
 .main-title {
   font-family: var(--font-serif);
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: 400;
   line-height: 1.1;
   color: var(--text-primary);
@@ -281,16 +281,6 @@ body {
   transition: var(--transition-smooth);
 }
 
-.hero-image-container:hover {
-  transform: rotate(0deg) scale(1.05); /* Straightens and zooms slightly on hover */
-  box-shadow: 0 20px 45px rgba(162, 93, 87, 0.28);
-}
-
-.hero-image-container:hover .hero-image-overlay {
-  height: 50%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, transparent 100%);
-}
-
 .hero-image {
   width: 100%;
   height: 100%;
@@ -298,10 +288,6 @@ body {
   transition: var(--transition-smooth);
   position: relative;
   z-index: 0;
-}
-
-.hero-image-container:hover .hero-image {
-  transform: scale(1.08); /* Zoom effect on the image inside */
 }
 
 /* Countdown Timer */
@@ -595,6 +581,9 @@ body {
 @media (max-width: 480px) {
   .form-row {
     grid-template-columns: 1fr;
+  }
+  .main-title {
+    font-size: 2.8rem;
   }
 }
 
