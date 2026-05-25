@@ -307,7 +307,7 @@ function initRSVP() {
 
   function updateGuestNameFields() {
     const count = parseInt(guestsCountInput.value, 10);
-    const currentFields = guestNamesContainer.querySelectorAll('.guest-name-field');
+    const currentFields = guestNamesContainer.children;
 
     while (currentFields.length < count - 1) {
       const i = currentFields.length + 1;
@@ -318,16 +318,14 @@ function initRSVP() {
         <input type="text" class="guest-name-input" placeholder="Nome e cognome ospite ${i + 1}">
       `;
       guestNamesContainer.appendChild(wrapper);
-      currentFields.push(wrapper);
     }
 
     while (currentFields.length > count - 1) {
       currentFields[currentFields.length - 1].remove();
-      currentFields.pop();
     }
   }
 
-  guestsCountInput.addEventListener('change', updateGuestNameFields);
+  guestsCountInput.addEventListener('input', updateGuestNameFields);
   updateGuestNameFields();
 
   // Handle Form Submission
