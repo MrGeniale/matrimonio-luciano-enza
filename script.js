@@ -7,7 +7,7 @@ const TRANSLATIONS = {
   it: {
     docTitle: "Il 63° Compleanno di SIMONE Martina Rosa | Invito Ufficiale",
     badge: "✨ 18 OTTOBRE 2026 ✨",
-    subtitle: "Festeggia con me il mio 63° Compleanno",
+    subtitle: "Festeggia con me il mio<br>63° Compleanno",
     lblDays: "Giorni",
     lblHours: "Ore",
     lblMinutes: "Minuti",
@@ -64,7 +64,7 @@ const TRANSLATIONS = {
   fr: {
     docTitle: "Le 63ème Anniversaire de SIMONE Martina Rosa | Invitation Officielle",
     badge: "✨ 18 octobre 2026 ✨",
-    subtitle: "Fêtez avec moi mon 63ème Anniversaire",
+    subtitle: "Fêtez avec moi mon<br>63ème Anniversaire",
     lblDays: "Jours",
     lblHours: "Heures",
     lblMinutes: "Minutes",
@@ -301,6 +301,35 @@ function initRSVP() {
     showSuccessScreen(data);
   }
 
+  // Dynamic guest name fields
+  const guestsCountInput = document.getElementById('guests-count');
+  const guestNamesContainer = document.getElementById('guest-names-container');
+
+  function updateGuestNameFields() {
+    const count = parseInt(guestsCountInput.value, 10);
+    const currentFields = guestNamesContainer.querySelectorAll('.guest-name-field');
+
+    while (currentFields.length < count - 1) {
+      const i = currentFields.length + 1;
+      const wrapper = document.createElement('div');
+      wrapper.className = 'form-group guest-name-field';
+      wrapper.innerHTML = `
+        <label>Nome Ospite ${i + 1}</label>
+        <input type="text" class="guest-name-input" placeholder="Nome e cognome ospite ${i + 1}">
+      `;
+      guestNamesContainer.appendChild(wrapper);
+      currentFields.push(wrapper);
+    }
+
+    while (currentFields.length > count - 1) {
+      currentFields[currentFields.length - 1].remove();
+      currentFields.pop();
+    }
+  }
+
+  guestsCountInput.addEventListener('change', updateGuestNameFields);
+  updateGuestNameFields();
+
   // Handle Form Submission
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -308,11 +337,17 @@ function initRSVP() {
     const name = document.getElementById('guest-name').value.trim();
     const attendance = attendanceSelect.value;
     const hasAllergies = document.querySelector('input[name="has-allergies"]:checked')?.value === 'yes';
-    const guestsCount = attendance === 'yes' ? parseInt(document.getElementById('guests-count').value, 10) : 0;
+    const guestsCount = attendance === 'yes' ? parseInt(guestsCountInput.value, 10) : 0;
     const diet = (attendance === 'yes' && hasAllergies) ? document.getElementById('diet-requirements').value.trim() : '';
     const notes = document.getElementById('guest-notes').value.trim();
 
-    const rsvpData = { name, attendance, hasAllergies, guestsCount, diet, notes };
+    const guestNames = [];
+    guestNamesContainer.querySelectorAll('.guest-name-input').forEach(input => {
+      const val = input.value.trim();
+      if (val) guestNames.push(val);
+    });
+
+    const rsvpData = { name, attendance, hasAllergies, guestsCount, diet, notes, guestNames };
     localStorage.setItem('rsvp_simonemartinarosa_63', JSON.stringify(rsvpData));
 
     showSuccessScreen(rsvpData);
@@ -336,7 +371,14 @@ function initRSVP() {
         dietGroup.classList.add('hidden');
         document.querySelectorAll('input[name="has-allergies"]').forEach(el => el.disabled = true);
       } else {
-        document.getElementById('guests-count').value = data.guestsCount;
+        guestsCountInput.value = data.guestsCount;
+        updateGuestNameFields();
+        if (data.guestNames) {
+          const inputs = guestNamesContainer.querySelectorAll('.guest-name-input');
+          data.guestNames.forEach((gn, i) => {
+            if (inputs[i]) inputs[i].value = gn;
+          });
+        }
         document.querySelectorAll('input[name="has-allergies"]').forEach(el => el.disabled = false);
         if (data.hasAllergies) {
           document.querySelector('input[name="has-allergies"][value="yes"]').checked = true;
@@ -365,6 +407,11 @@ function initRSVP() {
     if (data.attendance === 'yes') {
       message = t.waYesHeader;
       message += `${t.waGuestLabel}${data.name}\n`;
+      if (data.guestNames && data.guestNames.length > 0) {
+        data.guestNames.forEach(gn => {
+          message += `${t.waGuestLabel}${gn}\n`;
+        });
+      }
       message += `${t.waCountLabel}${data.guestsCount} ${data.guestsCount > 1 ? t.waPersonPlural : t.waPersonSingular}\n`;
       if (data.hasAllergies && data.diet) {
         message += `${t.waAllergyLabel}${data.diet}\n`;
