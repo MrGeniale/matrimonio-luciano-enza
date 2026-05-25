@@ -44,7 +44,7 @@ const TRANSLATIONS = {
     whatsappBtn: "Invia su WhatsApp a SIMONE Martina Rosa",
     changeRsvpBtn: "Modifica risposta",
     footerText: "Creato con amore per il 63° compleanno di SIMONE Martina Rosa.",
-    footerNote: "Invito Digitale &copy; 2026 - Agenzia Geniale",
+    footerNote: "Invito Geniale 2026 - Agenzia Geniale di Roberto Olivieri",
     // RSVP Dynamic Responses
     rsvpYesSummary: (guests) => `Hai confermato la tua presenza per <strong>${guests} person${guests > 1 ? 'e' : 'a'}</strong>.<br>Non vediamo l'ora di festeggiare insieme!`,
     rsvpNoSummary: "Hai risposto che purtroppo non potrai partecipare. Le tue note sono state salvate.",
@@ -101,7 +101,7 @@ const TRANSLATIONS = {
     whatsappBtn: "Envoyer sur WhatsApp à SIMONE Martina Rosa",
     changeRsvpBtn: "Modifier la réponse",
     footerText: "Créé avec amour pour le 63ème anniversaire de SIMONE Martina Rosa.",
-    footerNote: "Invitation digitale &copy; 2026 - Agenzia Geniale",
+    footerNote: "Invito Geniale 2026 - Agenzia Geniale di Roberto Olivieri",
     // RSVP Dynamic Responses
     rsvpYesSummary: (guests) => `Vous avez confirmé votre présence pour <strong>${guests} personne${guests > 1 ? 's' : ''}</strong>.<br>Nous avons hâte de faire la fête ensemble !`,
     rsvpNoSummary: "Vous avez répondu que vous ne pourrez malheureusement pas participer. Vos notes ont été enregistrées.",
