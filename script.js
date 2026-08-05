@@ -5,27 +5,27 @@ let currentLang = 'it';
 
 const TRANSLATIONS = {
   it: {
-    docTitle: "Il 63° Compleanno di SIMONE Martina Rosa | Invito Ufficiale",
-    badge: "✨ 18 OTTOBRE 2026 ✨",
-    subtitle: "Festeggia con me il mio<br>63° Compleanno",
+    docTitle: "Il Matrimonio di Luciano & Vincenza | Invito Ufficiale",
+    badge: "✨ 31 DICEMBRE 2026 ✨",
+    announcementText: "annunciano con gioia il loro MATRIMONIO",
+    dayName: "GIOVEDÌ",
     lblDays: "Giorni",
     lblHours: "Ore",
     lblMinutes: "Minuti",
     lblSeconds: "Secondi",
     ctaButton: "Conferma Presenza",
     detailsTitle: "I Dettagli dell'Evento",
-    quandoTitle: "Quando",
-    quandoDate: "Domenica 18 Ottobre 2026",
-    quandoSub: "Dalle ore 13:00 alle 17:00",
-    calendarBtn: "Aggiungi al Calendario",
-    doveTitle: "Dove",
-    locationNotes: "Clicca di seguito per visualizzare la mappa.",
+    ceremonyTitle: "La Cerimonia",
+    ceremonyFunny: "Alle 16 tutti pronti in Chiesa! La sposa arriverà in orario: è un evento raro da non perdere!",
     mapBtn: "Visualizza Mappa",
+    receptionTitle: "Il Ricevimento",
+    missionText: "<strong>MISSIONE DELLA SERATA:</strong> divertirsi! Contiamo su di voi per riempire la pista, brindare, ridere e rendere questa serata indimenticabile!",
     dressCodeTitle: "Dress Code",
-    dressCodeVal: "Elegante",
-    dressCodeSub: "È gradito l'abito elegante",
+    dressCodeVal: "Nessun dress code",
+    dressCodeSub: "La libertà è l'abito migliore che possiate indossare!",
+    calendarBtn: "Aggiungi al Calendario",
     rsvpTitle: "Sarai dei Nostri?",
-    rsvpSubtitle: "Ti chiediamo gentilmente di dare conferma entro il <strong>15 Settembre 2026</strong> per permetterci di organizzare al meglio.",
+    rsvpSubtitle: "È gradita conferma entro e non oltre il <strong>30.11.2026</strong>.",
     labelName: "Nome e Cognome",
     placeholderName: "Inserisci il tuo nome completo",
     labelAttendance: "Parteciperai?",
@@ -38,51 +38,52 @@ const TRANSLATIONS = {
     labelDiet: "Specificare allergie o esigenze alimentari:",
     placeholderDiet: "Es. Celiaco (senza glutine), intollerante al lattosio, vegetariano, ecc.",
     labelNotes: "Messaggio o Note speciali",
-    placeholderNotes: "Un messaggio di auguri per SIMONE Martina Rosa...",
+    placeholderNotes: "Un messaggio di auguri per gli sposi...",
     submitBtn: "Salva e Conferma",
     successTitle: "Grazie per la tua risposta!",
-    whatsappBtn: "Invia su WhatsApp a SIMONE Martina Rosa",
+    whatsappBtn: "Invia su WhatsApp",
     changeRsvpBtn: "Modifica risposta",
-    footerText: "Creato con amore per il 63° compleanno di SIMONE Martina Rosa.",
+    contactsTitle: "Contatti",
+    footerText: "Creato con amore per il matrimonio di Luciano e Vincenza.",
     footerNote: "Invito Geniale 2026 - Agenzia Geniale di Roberto Olivieri",
     // RSVP Dynamic Responses
     rsvpYesSummary: (guests) => `Hai confermato la tua presenza per <strong>${guests} person${guests > 1 ? 'e' : 'a'}</strong>.<br>Non vediamo l'ora di festeggiare insieme!`,
     rsvpNoSummary: "Hai risposto che purtroppo non potrai partecipare. Le tue note sono state salvate.",
     // WhatsApp templates
-    waYesHeader: "Ciao SIMONE Martina Rosa! ✨ Ti confermo con piacere la mia presenza per il tuo 63° compleanno! 🥂\n\n",
-    waNoHeader: "Ciao SIMONE Martina Rosa! ❤️ Ci tenevo a ringraziarti per l'invito al tuo 63° compleanno, ma purtroppo non potrò partecipare. Ti faccio tantissimi auguri di buon compleanno! 🎂✨\n\n",
+    waYesHeader: "Ciao Luciano e Vincenza! ✨ Confermo con piacere la mia presenza per il vostro matrimonio! 🥂\n\n",
+    waNoHeader: "Ciao Luciano e Vincenza! ❤️ Vi ringrazio tantissimo per l'invito al vostro matrimonio, ma purtroppo non potrò partecipare. Vi faccio i miei migliori auguri di cuore! ✨\n\n",
     waGuestLabel: "👤 Invitato: ",
     waCountLabel: "👥 Saremo in: ",
     waPersonPlural: "persone",
     waPersonSingular: "persona",
-    waAllergyLabel: "⚠️ Allergies/Intolleranze: ",
+    waAllergyLabel: "⚠️ Allergie/Intolleranze: ",
     waAllergyNone: "Nessuna",
     waAllergyTbc: "Sì (da concordare)",
-    waMsgLabel: "📝 Message: ",
+    waMsgLabel: "📝 Messaggio: ",
     waMsgFromLabel: "👤 Da parte di: "
   },
   fr: {
-    docTitle: "Le 63ème Anniversaire de SIMONE Martina Rosa | Invitation Officielle",
-    badge: "✨ 18 octobre 2026 ✨",
-    subtitle: "Fêtez avec moi mon<br>63ème Anniversaire",
+    docTitle: "Le Mariage de Luciano & Vincenza | Invitation Officielle",
+    badge: "✨ 31 DÉCEMBRE 2026 ✨",
+    announcementText: "annoncent avec joie leur MARIAGE",
+    dayName: "JEUDI",
     lblDays: "Jours",
     lblHours: "Heures",
     lblMinutes: "Minutes",
     lblSeconds: "Secondes",
     ctaButton: "Confirmer la Présence",
     detailsTitle: "Les Détails de l'Évènement",
-    quandoTitle: "Quand",
-    quandoDate: "Dimanche 18 octobre 2026",
-    quandoSub: "De 13h00 à 17h00",
-    calendarBtn: "Ajouter au Calendrier",
-    doveTitle: "Où",
-    locationNotes: "Cliquez ci-dessous pour voir la carte.",
+    ceremonyTitle: "La Cérémonie",
+    ceremonyFunny: "À 16h00 tout le monde est prêt à l'église ! La mariée sera à l'heure : un événement rare à ne pas manquer !",
     mapBtn: "Voir la Carte",
+    receptionTitle: "La Réception",
+    missionText: "<strong>MISSION DE LA SOIRÉE:</strong> s'amuser ! Nous comptons sur vous pour remplir la piste, trinquer, rire et rendre cette soirée inoubliable !",
     dressCodeTitle: "Dress Code",
-    dressCodeVal: "Élégant",
-    dressCodeSub: "Tenue élégante souhaitée",
+    dressCodeVal: "Aucun dress code",
+    dressCodeSub: "La liberté est la meilleure tenue que vous puissiez porter !",
+    calendarBtn: "Ajouter au Calendrier",
     rsvpTitle: "Serez-vous des nôtres ?",
-    rsvpSubtitle: "Veuillez confirmer votre présence avant le <strong>15 septembre 2026</strong> afin de nous permettre de nous organiser au mieux.",
+    rsvpSubtitle: "Réponse souhaitée avant le <strong>30.11.2026</strong>.",
     labelName: "Nom et Prénom",
     placeholderName: "Entrez votre nom complet",
     labelAttendance: "Allez-vous participer ?",
@@ -95,19 +96,20 @@ const TRANSLATIONS = {
     labelDiet: "Veuillez spécifier vos allergies ou exigences alimentaires :",
     placeholderDiet: "Ex. Cœliaque (sans gluten), intolérant au lactose, végétarien, etc.",
     labelNotes: "Message ou Notes spéciales",
-    placeholderNotes: "Un message de vœux pour SIMONE Martina Rosa...",
+    placeholderNotes: "Un message de vœux pour les mariés...",
     submitBtn: "Enregistrer et Confirmer",
     successTitle: "Merci pour votre réponse !",
-    whatsappBtn: "Envoyer sur WhatsApp à SIMONE Martina Rosa",
+    whatsappBtn: "Envoyer sur WhatsApp",
     changeRsvpBtn: "Modifier la réponse",
-    footerText: "Créé avec amour pour le 63ème anniversaire de SIMONE Martina Rosa.",
+    contactsTitle: "Contacts",
+    footerText: "Créé avec amour pour le mariage de Luciano et Vincenza.",
     footerNote: "Invito Geniale 2026 - Agenzia Geniale di Roberto Olivieri",
     // RSVP Dynamic Responses
     rsvpYesSummary: (guests) => `Vous avez confirmé votre présence pour <strong>${guests} personne${guests > 1 ? 's' : ''}</strong>.<br>Nous avons hâte de faire la fête ensemble !`,
     rsvpNoSummary: "Vous avez répondu que vous ne pourrez malheureusement pas participer. Vos notes ont été enregistrées.",
     // WhatsApp templates
-    waYesHeader: "Salut SIMONE Martina Rosa! ✨ C'est avec grand plaisir que je confirme ma présence pour ton 63ème anniversaire! 🥂\n\n",
-    waNoHeader: "Salut SIMONE Martina Rosa! ❤️ Je voulais te remercier pour l'invitation à ton 63ème anniversaire, mais malheureusement je ne pourrai pas participer. Je te souhaite un excellent anniversaire! 🎂✨\n\n",
+    waYesHeader: "Salut Luciano et Vincenza ! ✨ C'est avec grand plaisir que je confirme ma présence pour votre mariage ! 🥂\n\n",
+    waNoHeader: "Salut Luciano et Vincenza ! ❤️ Je voulais vous remercier pour l'invitation à votre mariage, mais malheureusement je ne pourrai pas participer. Je vous souhaite tous mes vœux de bonheur ! ✨\n\n",
     waGuestLabel: "👤 Invité: ",
     waCountLabel: "👥 Nombre de personnes: ",
     waPersonPlural: "personnes",
@@ -170,7 +172,7 @@ function setLanguage(lang) {
   }
 
   // Refresh success screen message if RSVP is saved
-  const savedRSVP = localStorage.getItem('rsvp_simonemartinarosa_63');
+  const savedRSVP = localStorage.getItem('rsvp_enza_luciano_wedding');
   if (savedRSVP) {
     const data = JSON.parse(savedRSVP);
     const summaryText = document.getElementById('rsvp-summary-text');
@@ -196,6 +198,7 @@ function initEventDetails() {
   const locAddressEl = document.getElementById('location-address');
   const locNotesEl = document.getElementById('location-notes');
   const locMapBtn = document.getElementById('location-map-btn');
+  const calendarBtn = document.getElementById('calendar-btn');
 
   if (locNameEl) locNameEl.textContent = EVENT_CONFIG.location.name;
   if (locAddressEl) locAddressEl.textContent = EVENT_CONFIG.location.address;
@@ -208,6 +211,10 @@ function initEventDetails() {
     }
   } else {
     if (locMapBtn) locMapBtn.classList.add('hidden');
+  }
+
+  if (calendarBtn && EVENT_CONFIG.calendarUrl) {
+    calendarBtn.href = EVENT_CONFIG.calendarUrl;
   }
 
   // Initial language set to Italian
@@ -295,7 +302,7 @@ function initRSVP() {
   });
 
   // Check for existing RSVP in localStorage
-  const savedRSVP = localStorage.getItem('rsvp_simonemartinarosa_63');
+  const savedRSVP = localStorage.getItem('rsvp_enza_luciano_wedding');
   if (savedRSVP) {
     const data = JSON.parse(savedRSVP);
     showSuccessScreen(data);
@@ -346,7 +353,7 @@ function initRSVP() {
     });
 
     const rsvpData = { name, attendance, hasAllergies, guestsCount, diet, notes, guestNames };
-    localStorage.setItem('rsvp_simonemartinarosa_63', JSON.stringify(rsvpData));
+    localStorage.setItem('rsvp_enza_luciano_wedding', JSON.stringify(rsvpData));
 
     showSuccessScreen(rsvpData);
     sendToWebhook(rsvpData);
@@ -358,7 +365,7 @@ function initRSVP() {
     form.classList.remove('hidden');
     
     // Pre-fill existing data
-    const savedRSVP = localStorage.getItem('rsvp_simonemartinarosa_63');
+    const savedRSVP = localStorage.getItem('rsvp_enza_luciano_wedding');
     if (savedRSVP) {
       const data = JSON.parse(savedRSVP);
       document.getElementById('guest-name').value = data.name;
@@ -394,7 +401,7 @@ function initRSVP() {
 
   // WhatsApp redirection message builder
   sendWhatsAppBtn.addEventListener('click', () => {
-    const savedRSVP = localStorage.getItem('rsvp_simonemartinarosa_63');
+    const savedRSVP = localStorage.getItem('rsvp_enza_luciano_wedding');
     if (!savedRSVP) return;
 
     const data = JSON.parse(savedRSVP);
