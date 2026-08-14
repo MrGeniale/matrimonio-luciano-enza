@@ -790,3 +790,96 @@ body::before {
   background: var(--red-primary);
   color: white;
 }
+
+/* Gift / IBAN Section */
+.gift-section {
+  margin-top: 40px;
+}
+.gift-card {
+  text-align: center;
+}
+.gift-intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: 25px;
+}
+.iban-accordion {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--gold-accent);
+}
+.iban-toggle {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(176, 27, 46, 0.05), rgba(212, 175, 55, 0.08));
+  border: none;
+  padding: 14px 20px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--red-primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+.iban-toggle:hover {
+  background: linear-gradient(135deg, rgba(176, 27, 46, 0.1), rgba(212, 175, 55, 0.12));
+}
+.iban-arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+  color: var(--gold-accent);
+}
+.iban-accordion.open .iban-arrow {
+  transform: rotate(180deg);
+}
+.iban-content {
+  display: none;
+  padding: 20px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  background: rgba(253, 252, 250, 0.5);
+}
+.iban-accordion.open .iban-content {
+  display: block;
+}
+.iban-value {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 1.5px;
+  padding: 12px 16px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px dashed var(--gold-accent);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  word-break: break-all;
+}
+.iban-copy-btn {
+  background: var(--red-primary);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  margin-bottom: 15px;
+}
+.iban-copy-btn:hover {
+  background: #8b1a2a;
+  transform: translateY(-1px);
+}
+.iban-copy-btn.copied {
+  background: #2d7a3a;
+}
+.iban-note {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-top: 10px;
+}

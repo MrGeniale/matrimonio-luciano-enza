@@ -110,8 +110,12 @@ const TRANSLATIONS = {
       <p>E se abbiamo scelto di condividerlo con voi, è perché, ognuno a suo modo, siete parte della nostra vita.</p>
     `,
     scattiTitle: "I Vostri Scatti",
-    scattiIntro: "Ci sono momenti che meritano di essere vissuti appieno, con gli occhi e con il cuore. Il nostro desiderio più grande è vedervi godere questa giornata insieme a noi, tra emozioni, abbracci e divertimento, senza la preoccupazione di dover immortalare ogni istante: alle foto ufficiali, infatti, penserà il nostro meraviglioso fotografo!<br><br>Sappiamo però che gli scatti più autentici nascono spesso all'improvviso, attraverso lo sguardo di chi ci vuole bene. Se catturerete una risata sincera, un brindisi o un momento speciale, vi chiediamo di condividerlo nel nostro album digitale. Sarà meraviglioso, dopo il matrimonio, rivivere questo giorno anche attraverso i vostri occhi e i vostri ricordi.<br><br>Qui sotto troverete tutte le indicazioni per caricare foto e video.",
-    scattiBtn: "Carica Foto e Video"
+    scattiBtn: "Carica Foto e Video",
+    giftTitle: "Un Pensiero per Noi",
+    giftIntro: "Per chi preferisce la comodità, soprattutto per i pensieri più importanti 😝 qui sotto trovate il nostro IBAN.<br>Per tutto il resto siamo ancora dei romantici tradizionalisti… viva le care vecchie buste! 💌",
+    giftShowIban: "💳 Visualizza IBAN",
+    giftCopyIban: "📋 Copia IBAN",
+    giftNote: "* IBAN intestato a entrambi gli sposi.<br>Causale consigliata: <em>\"Regalo matrimonio Luciano e Vincenza — [Nome Famiglia/Persona]\"</em>"
   },
   fr: {
     docTitle: "Le Mariage de Luciano & Vincenza | Invitation Officielle",
@@ -217,8 +221,12 @@ const TRANSLATIONS = {
       <p>Et si nous avons choisi de la partager avec vous, c'est parce que, chacun à votre manière, vous faites partie de notre vie.</p>
     `,
     scattiTitle: "Vos Photos",
-    scattiIntro: "Il y a des moments qui méritent d'être vécus pleinement, avec les yeux et le cœur. Notre plus grand désir est de vous voir profiter de cette journée avec nous, au milieu des émotions, des embrassades et des rires, sans vous soucier de devoir immortaliser chaque instant : notre merveilleux photographe s'occupe des photos officielles !<br><br>Cependant, nous savons que les clichés les plus authentiques naissent souvent à l'improviste, à travers le regard de ceux qui nous aiment. Si vous capturez un rire sincère, un toast ou un moment spécial, nous vous demandons de le partager dans notre album numérique. Il sera merveilleux, après le mariage, de revivre cette journée également à travers vos yeux et vos souvenirs.<br><br>Vous trouverez ci-dessous toutes les indications pour télécharger photos et vidéos.",
-    scattiBtn: "Télécharger Photos et Vidéos"
+    scattiBtn: "Télécharger Photos et Vidéos",
+    giftTitle: "Un Cadeau pour Nous",
+    giftIntro: "Pour ceux qui préfèrent le confort, surtout pour les pensées les plus importantes 😝 ci-dessous vous trouverez notre IBAN.<br>Pour tout le reste, nous sommes encore des romantiques traditionnels… vive les bonnes vieilles enveloppes ! 💌",
+    giftShowIban: "💳 Voir l'IBAN",
+    giftCopyIban: "📋 Copier l'IBAN",
+    giftNote: "* IBAN enregistré aux deux époux.<br>Motif recommandé : <em>\"Cadeau de mariage Luciano et Vincenza — [Nom Famille/Personne]\"</em>"
   },
   en: {
     docTitle: "The Wedding of Luciano & Vincenza | Official Invitation",
@@ -324,10 +332,13 @@ const TRANSLATIONS = {
       <p>And if we chose to share it with you, it is because, each in your own way, you are part of our lives.</p>
     `,
     scattiTitle: "Your Photos",
-    scattiIntro: "There are moments that deserve to be lived fully, with your eyes and with your heart. Our greatest desire is to see you enjoy this day together with us, amidst emotions, hugs, and fun, without the worry of having to capture every moment: our wonderful photographer will take care of the official photos!<br><br>However, we know that the most authentic shots are often born suddenly, through the eyes of those who love us. If you capture a sincere laugh, a toast, or a special moment, we ask you to share it in our digital album. It will be wonderful, after the wedding, to relive this day also through your eyes and memories.<br><br>Below you will find all the instructions to upload photos and videos.",
-    scattiBtn: "Upload Photos & Videos"
-  }
-};
+    scattiBtn: "Upload Photos & Videos",
+    giftTitle: "A Gift for Us",
+    giftIntro: "For those who prefer convenience, especially for the most important thoughts 😝 below you can find our IBAN.<br>For everything else, we are still traditional romantics… long live the good old envelopes! 💌",
+    giftShowIban: "💳 View IBAN",
+    giftCopyIban: "📋 Copy IBAN",
+    giftNote: "* IBAN registered to both newlyweds.<br>Recommended description: <em>\"Wedding gift Luciano and Vincenza — [Family/Person Name]\"</em>"
+  };
 
 document.addEventListener('DOMContentLoaded', () => {
   initLanguageSwitcher();
@@ -336,6 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRSVP();
   initSmoothScroll();
   initStoriesAndAlbum();
+  initGiftIban();
 });
 
 // 0. Language Switcher Logic
@@ -866,5 +878,39 @@ function initStoriesAndAlbum() {
         alert('Il link per caricare le foto sarà attivo il giorno del matrimonio! 📸');
       });
     }
+  }
+}
+
+// 10. Gift IBAN Accordion and Clipboard Logic
+function initGiftIban() {
+  const accordion = document.querySelector('.iban-accordion');
+  if (!accordion) return;
+
+  const toggleBtn = document.getElementById('iban-toggle');
+  const copyBtn = document.getElementById('iban-copy-btn');
+  const ibanVal = document.getElementById('iban-value');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      accordion.classList.toggle('open');
+    });
+  }
+
+  if (copyBtn && ibanVal) {
+    copyBtn.addEventListener('click', () => {
+      const ibanText = ibanVal.textContent.replace(/\s+/g, '');
+      navigator.clipboard.writeText(ibanText).then(() => {
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = currentLang === 'it' ? '✅ Copiato!' : (currentLang === 'fr' ? '✅ Copié !' : '✅ Copied!');
+        copyBtn.classList.add('copied');
+        
+        setTimeout(() => {
+          copyBtn.textContent = originalText;
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      }).catch(err => {
+        console.error('Errore nella copia dell\'IBAN:', err);
+      });
+    });
   }
 }
