@@ -340,21 +340,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 0. Language Switcher Logic
 function initLanguageSwitcher() {
-  const buttons = document.querySelectorAll('.language-selector-container .lang-btn');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const selectedLang = btn.getAttribute('data-lang');
+  const dropdown = document.getElementById('lang-dropdown');
+  if (!dropdown) return;
+  
+  const trigger = dropdown.querySelector('.dropdown-trigger');
+  const options = dropdown.querySelectorAll('.dropdown-opt');
+  const currentText = dropdown.querySelector('.current-lang-text');
+  
+  // Toggle dropdown on trigger click
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('open');
+  });
+  
+  // Change language on option click
+  options.forEach(opt => {
+    opt.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const selectedLang = opt.getAttribute('data-lang');
+      currentText.innerHTML = opt.innerHTML; // Update trigger text/flag
       setLanguage(selectedLang);
+      dropdown.classList.remove('open'); // Close dropdown
     });
+  });
+  
+  // Close dropdown when clicking outside
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('open');
   });
 }
 
 function setLanguage(lang) {
   currentLang = lang;
   
-  // Update active class on buttons
-  const buttons = document.querySelectorAll('.language-selector-container .lang-btn');
-  buttons.forEach(btn => {
+  // Update active class on dropdown buttons
+  const optButtons = document.querySelectorAll('.language-dropdown .dropdown-opt');
+  optButtons.forEach(btn => {
     if (btn.getAttribute('data-lang') === lang) {
       btn.classList.add('active');
     } else {
