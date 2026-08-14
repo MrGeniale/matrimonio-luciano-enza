@@ -171,6 +171,16 @@ body {
   line-height: 1;
   margin-bottom: 20px;
   animation: fadeIn 1.5s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.monogram-logo .ampersand {
+  margin-left: -0.02em;
+  margin-right: -0.08em;
+}
+.monogram-logo .letter-v {
+  margin-left: -0.08em;
 }
 
 .celebrant-names-grid {
