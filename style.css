@@ -322,6 +322,9 @@ body::before {
 .details-section, .rsvp-section, .contacts-section {
   margin-bottom: 40px;
 }
+.details-section {
+  margin-bottom: 60px; /* Spazio extra prima del divisore tratteggiato delle storie */
+}
 .section-title {
   font-family: var(--font-serif);
   font-size: 1.8rem;

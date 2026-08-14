@@ -5,10 +5,10 @@ const EVENT_CONFIG = {
   calendarUrl: "https://www.google.com/calendar/render?action=TEMPLATE&text=Matrimonio+di+Luciano+ed+Enza&dates=20261231T143000Z%2F20261231T233000Z&details=Festeggiate+con+noi+il+nostro+matrimonio%21+Ricordatevi+di+dare+conferma+sul+sito.&location=Chiesa+Maria+S.S.+del+Monte+Carmelo%2C+Martina+Franca+TA",
   whatsAppPhone: "+393295658461", // WhatsApp di Vincenza per RSVP
   location: {
-    name: "Abbazia San Lorenzo",
+    name: "Abbazia di San Lorenzo",
     address: "Contrada Sant'Angelo 5, Fasano (Br)",
     gmapsUrl: "https://maps.google.com/?q=Abbazia+San+Lorenzo+Fasano",
-    notes: "La cerimonia si terrà alle 15:30 presso la Chiesa Maria S.S. del Monte Carmelo a Martina Franca (Ta). A seguire, festeggeremo presso l'Abbazia San Lorenzo a Fasano (Br).",
+    notes: "La cerimonia si terrà alle 15:30 presso la Chiesa Maria S.S. del Monte Carmelo a Martina Franca (Ta). A seguire, festeggeremo presso l'Abbazia di San Lorenzo a Fasano (Br).",
     isConfirmed: true
   },
   ceremony: {
