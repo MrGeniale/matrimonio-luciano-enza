@@ -338,6 +338,7 @@ function initRSVP() {
     } else {
       menuSelect.innerHTML = `
         <option value="Menù Baby" selected>Menù Baby</option>
+        <option value="Completo">Completo</option>
         <option value="Solo posto a sedere">Solo posto a sedere</option>
       `;
     }
