@@ -338,7 +338,8 @@ const TRANSLATIONS = {
     giftShowIban: "💳 View IBAN",
     giftCopyIban: "📋 Copy IBAN",
     giftNote: "* IBAN registered to both newlyweds.<br>Recommended description: <em>\"Wedding gift Luciano and Vincenza — [Family/Person Name]\"</em>"
-  };
+  }
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   initLanguageSwitcher();
