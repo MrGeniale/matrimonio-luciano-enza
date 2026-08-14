@@ -725,3 +725,39 @@ body::before {
     grid-template-columns: 1fr;
   }
 }
+
+/* Floating Language Selector */
+.language-selector-container {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10000;
+  display: flex;
+  gap: 8px;
+  background: rgba(253, 252, 250, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 6px 12px;
+  border-radius: 30px;
+  border: 1px solid var(--gold-accent);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.language-selector-container .lang-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 20px;
+  transition: var(--transition-smooth);
+}
+.language-selector-container .lang-btn.active {
+  background: var(--red-primary);
+  color: white;
+}
+.language-selector-container .lang-btn:hover:not(.active) {
+  background: rgba(176, 27, 46, 0.1);
+  color: var(--red-primary);
+}

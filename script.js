@@ -155,10 +155,8 @@ const TRANSLATIONS = {
     contactsTitle: "Contacts",
     footerText: "Créé avec amour pour le mariage de Luciano et Vincenza.",
     footerNote: "Invito Geniale 2026 - Agenzia Geniale di Roberto Olivieri",
-    // RSVP Dynamic Responses
     rsvpYesSummary: (guests) => `Vous avez confirmé votre présence pour <strong>${guests} personne${guests > 1 ? 's' : ''}</strong>.<br>Nous avons hâte de faire la fête ensemble !`,
     rsvpNoSummary: "Vous avez répondu que vous ne pourrez malheureusement pas participer. Vos notes ont été enregistrées.",
-    // WhatsApp templates
     waYesHeader: "Salut Luciano et Vincenza ! ✨ C'est avec grand plaisir que je confirme ma présence pour votre mariage ! 🥂\n\n",
     waNoHeader: "Salut Luciano et Vincenza ! ❤️ Je voulais vous remercier pour l'invitation à votre mariage, mais malheureusement je ne pourrai pas participer. Je vous souhaite tous mes vœux de bonheur ! ✨\n\n",
     waGuestLabel: "👤 Invité: ",
@@ -169,7 +167,165 @@ const TRANSLATIONS = {
     waAllergyNone: "Aucune",
     waAllergyTbc: "Oui (à convenir)",
     waMsgLabel: "📝 Message: ",
-    waMsgFromLabel: "👤 De la part de: "
+    waMsgFromLabel: "👤 De la part de: ",
+    storiesTitle: "Nos Histoires",
+    tabNoi: "💖 Nous",
+    tabFianco: "🤝 À nos côtés",
+    tabSpeciale: "✨ Un endroit spécial",
+    tabVoi: "👥 Vous",
+    storyNoi: `
+      <p><strong>Parfois, il n'est pas nécessaire de changer de chemin, il suffit de commencer à le parcourir ensemble.</strong></p>
+      <p>Pendant près de quatre ans, nous étions là, à quelques pas l'un de l'autre. Nous travaillions dans le même bâtiment, nous nous voyions presque tous les jours, nous nous connaissions. Nos journées se croisaient dans les couloirs et à travers de petits gestes quotidiens. Le chemin, au fond, était déjà le même. Simplement, nous n'avions pas encore commencé à le parcourir ensemble.</p>
+      <p>Luciano, de sa manière douce et discrète, cherchait de petites occasions pour se rapprocher d'Enza : le courrier à apporter, quelques sourires supplémentaires, des invitations à boire un verre ; mais certaines histoires ont tout simplement besoin de temps.</p>
+      <p>Puis un moment différent est arrivé. Un de ceux où, sans avoir besoin de grands mots, on parvient à voir au-delà des apparences. Il a suffi d'un message, d'une attention sincère, pour que nous commencions à regarder avec des yeux nouveaux ce qui était sous nos yeux depuis des années.</p>
+      <p>De là sont nés les regards à la fin du travail, les messages, l'envie de se chercher et, enfin, de se connaître vraiment.</p>
+      <p>Petit à petit, nous nous sommes découverts et choisis. Nous avons été unis par la douceur des petits gestes, l'attention, la complicité et cette capacité à apporter de la lumière dans les journées de l'autre.</p>
+      <p>Et dire qu'Enza s'imaginait le Prince Charmant tout autrement, certainement pas avec un uniforme de travail bleu ! 🤣</p>
+      <p>Et pourtant il était déjà là, à quelques pas.</p>
+      <p>Pendant des années, nous avons partagé les mêmes lieux sans savoir qu'un jour nous partagerions bien plus. Puis le bon moment est venu : nous avons commencé à nous regarder vraiment, à nous choisir et à marcher dans la même direction.</p>
+      <p>Et aujourd'hui, ce chemin que nous parcourions sans le savoir est devenu le nôtre.</p>
+    `,
+    storyFianco: `
+      <p><strong>Il y a des personnes qui rendent le voyage plus beau, simplement en marchant à nos côtés.</strong></p>
+      <p>Il y a des personnes que l'on rencontre en chemin, et puis il y a celles qui, tout simplement, ont toujours été là.</p>
+      <p><strong>Donato et Rosa</strong>, vous êtes cela pour nous.</p>
+      <p>Quand nous avons ouvert les yeux sur le monde, vous étiez déjà là. Avant les souvenirs, avant les mots, avant même que nous puissions comprendre ce que signifiait avoir quelqu'un à nos côtés.</p>
+      <p>Vous avez été nos grands frères, nos premières certitudes, une présence qui a traversé silencieusement chaque saison de notre vie.</p>
+      <p>Vous nous avez vus grandir, changer, tomber et recommencer. Vous avez connu tant de versions de nous, gardé des morceaux de notre histoire et partagé ces moments qui, sans le savoir, nous menaient jusqu'ici.</p>
+      <p>Et aujourd'hui, à l'aube de l'un des pas les plus importants de notre vie, nous avons souhaité une chose simple : vous retrouver encore une fois à nos côtés.</p>
+      <p>Vous choisir comme témoins ne signifie pas seulement vous confier un rôle le jour de notre mariage. Cela signifie donner une place spéciale, dans notre avenir, à ceux qui ont fait partie de notre passé depuis le début.</p>
+      <p>Parce qu'il y a des présences que le temps n'a pas besoin d'expliquer.</p>
+      <p>Il y a des liens qui n'ont pas besoin d'être choisis pour devenir un choix, chaque jour.</p>
+      <p>Vous étiez là au début de notre histoire. Vous serez là au début de notre nouvelle vie. Et il n'y avait peut-être pas de plus belle façon de vous dire à quel point vous êtes importants pour nous.</p>
+    `,
+    storySpeciale: `
+      <p><strong>Il y a des liens qui grandissent avec nous, que le temps rend précieux et qui, dans les moments les plus importants, font partie de notre histoire.</strong></p>
+      <p>En un jour si spécial, nos neveux et nièces ne pouvaient pas manquer : des présences uniques dans nos vies et les gardiens d'un morceau de notre cœur.</p>
+      <p><strong>Valeria, Daniela, Alisa, Monika et Giorgia</strong> seront nos demoiselles d'honneur. Cinq filles, cinq sourires que nous voulions à nos côtés pour accompagner en douceur l'un des moments les plus émouvants de notre journée.</p>
+      <p>Pour annoncer que ce moment tant attendu arrive enfin, ce sera <strong>Fabio</strong>, notre page. C'est lui qui précédera la mariée et les demoiselles d'honneur avec un message tout particulier pour l'oncle.</p>
+      <p>Et puis il y a <strong>Francesco</strong>, à qui nous avons confié quelque chose de petit par la taille, mais d'immense par la signification : nos alliances. C'est lui qui les gardera précieusement jusqu'au moment où elles deviendront le symbole de la promesse que nous sommes sur le point de nous faire.</p>
+      <p>Nous avons voulu donner à chacun d'eux une place spéciale car, lorsque nous nous souviendrons de ce jour, nous voulons nous souvenir d'eux ainsi : proches de nous, chacun dans son rôle, participant à un moment que nous porterons à jamais dans notre âme.</p>
+      <p>Parce qu'il y a des affections qui n'ont pas besoin de grands mots : il suffit de les vouloir proches quand la vie nous offre quelque chose d'inoubliable.</p>
+    `,
+    storyVoi: `
+      <p><strong>Parce qu'un jour spécial ne le devient vraiment que lorsqu'il est partagé avec les personnes qui comptent.</strong></p>
+      <p>Il y a des personnes qui auront un rôle particulier lors de notre journée et d'autres qui la rendront unique simplement par leur présence.</p>
+      <p>Chacun de vous occupe une place importante dans notre vie : amis, parents, personnes rencontrées en chemin et restées, au fil du temps, partie de notre histoire.</p>
+      <p>Nous avons de la chance d'être entourés de tant d'affections sincères, différentes les unes des autres mais également capables de laisser quelque chose de précieux dans nos vies.</p>
+      <p>Et c'est précisément pour cela que nous avons tant désiré vous avoir avec nous : pour partager les embrassades, les rires, les regards et toutes ces émotions qui, ensemble, deviendront des souvenirs.</p>
+      <p>Car ce sera notre journée, mais une partie de sa beauté sera également faite par les personnes qui nous entoureront.</p>
+      <p>Et si nous avons choisi de la partager avec vous, c'est parce que, chacun à votre manière, vous faites partie de notre vie.</p>
+    `,
+    scattiTitle: "Vos Photos",
+    scattiIntro: "Il y a des moments qui méritent d'être vécus pleinement, avec les yeux et le cœur. Notre plus grand désir est de vous voir profiter de cette journée avec nous, au milieu des émotions, des embrassades et des rires, sans vous soucier de devoir immortaliser chaque instant : notre merveilleux photographe s'occupe des photos officielles !<br><br>Cependant, nous savons que les clichés les plus authentiques naissent souvent à l'improviste, à travers le regard de ceux qui nous aiment. Si vous capturez un rire sincère, un toast ou un moment spécial, nous vous demandons de le partager dans notre album numérique. Il sera merveilleux, après le mariage, de revivre cette journée également à travers vos yeux et vos souvenirs.<br><br>Vous trouverez ci-dessous toutes les indications pour télécharger photos et vidéos.",
+    scattiBtn: "Télécharger Photos et Vidéos"
+  },
+  en: {
+    docTitle: "The Wedding of Luciano & Vincenza | Official Invitation",
+    badge: "✨ DECEMBER 31, 2026 ✨",
+    announcementText: "joyfully announce their MARRIAGE",
+    dayName: "THURSDAY",
+    lblDays: "Days",
+    lblHours: "Hours",
+    lblMinutes: "Minutes",
+    lblSeconds: "Seconds",
+    ctaButton: "Confirm RSVP",
+    detailsTitle: "Event Details",
+    ceremonyTitle: "The Ceremony",
+    ceremonyFunny: "At 16:00 everyone ready at the Church! The bride will arrive on time: it's a rare event not to be missed!",
+    mapBtn: "View Map",
+    receptionTitle: "The Reception",
+    missionText: "<strong>MISSION OF THE NIGHT:</strong> have fun! We count on you to fill the dance floor, toast, laugh, and make this night unforgettable!",
+    dressCodeTitle: "Dress Code",
+    dressCodeVal: "No dress code",
+    dressCodeSub: "Freedom is the best outfit you can wear!",
+    calendarBtn: "Add to Calendar",
+    rsvpTitle: "Will you join us?",
+    rsvpSubtitle: "Confirmation is kindly requested by and no later than <strong>30.11.2026</strong>.",
+    labelName: "First & Last Name",
+    placeholderName: "Enter your full name",
+    labelAttendance: "Will you attend?",
+    optionYes: "Yes, with pleasure!",
+    optionNo: "Unfortunately I cannot attend",
+    labelGuests: "Number of Guests",
+    labelAllergies: "Do you have any food allergies or dietary restrictions?",
+    radioNo: "No, none",
+    radioYes: "Yes, I have allergies / restrictions",
+    labelDiet: "Specify allergies or dietary requirements:",
+    placeholderDiet: "e.g., Celiac (gluten-free), lactose intolerant, vegetarian, etc.",
+    labelNotes: "Message or Special Notes",
+    placeholderNotes: "A wish or message for the couple...",
+    submitBtn: "Save and Confirm",
+    successTitle: "Thank you for your response!",
+    whatsappBtn: "Send via WhatsApp",
+    changeRsvpBtn: "Modify response",
+    contactsTitle: "Contacts",
+    footerText: "Created with love for the wedding of Luciano and Vincenza.",
+    footerNote: "Invito Geniale 2026 - Agenzia Geniale di Roberto Olivieri",
+    rsvpYesSummary: (guests) => `You confirmed your attendance for <strong>${guests} guest${guests > 1 ? 's' : ''}</strong>.<br>We can't wait to celebrate together!`,
+    rsvpNoSummary: "You responded that unfortunately you won't be able to attend. Your notes have been saved.",
+    waYesHeader: "Hello Luciano and Vincenza! ✨ I joyfully confirm my attendance for your wedding! 🥂\n\n",
+    waNoHeader: "Hello Luciano and Vincenza! ❤️ Thank you so much for the invitation to your wedding, but unfortunately I won't be able to attend. I wish you all the very best! ✨\n\n",
+    waGuestLabel: "👤 Guest: ",
+    waCountLabel: "👥 Total Guests: ",
+    waPersonPlural: "guests",
+    waPersonSingular: "guest",
+    waAllergyLabel: "⚠️ Allergies/Diet: ",
+    waAllergyNone: "None",
+    waAllergyTbc: "Yes (to be discussed)",
+    waMsgLabel: "📝 Message: ",
+    waMsgFromLabel: "👤 From: ",
+    storiesTitle: "Our Stories",
+    tabNoi: "💖 Us",
+    tabFianco: "🤝 By our side",
+    tabSpeciale: "✨ A special place",
+    tabVoi: "👥 You",
+    storyNoi: `
+      <p><strong>Sometimes you don't need to change paths, you just need to start walking it together.</strong></p>
+      <p>For almost four years, we were right there, just steps away from each other. We worked in the same building, saw each other almost every day, and knew each other. Our days crossed in hallways and small daily gestures. The path, after all, was already the same. We simply hadn't started walking it together yet.</p>
+      <p>Luciano, in his gentle and discreet way, looked for small opportunities to get closer to Enza: post to deliver, a few more smiles, some invitations to grab a drink; but some stories simply need their time.</p>
+      <p>Then a different moment arrived. One of those where, without the need for many words, you manage to see beyond what is shown. A message, a sincere attention was enough to make us look with new eyes at something that had been in front of us for years.</p>
+      <p>From there came glances at the end of the workday, messages, the desire to look for each other, and finally, to truly know each other.</p>
+      <p>Little by little we discovered and chose each other. We were united by the sweetness of small gestures, care, complicity, and the ability to bring light into each other's days.</p>
+      <p>And to think that Enza imagined her Prince Charming in a completely different way, certainly not in a blue work uniform! 🤣</p>
+      <p>And yet he was already there, just steps away.</p>
+      <p>For years we shared the same places without knowing that one day we would share much more. Then the right moment came: we started looking at each other, choosing each other, and walking in the same direction.</p>
+      <p>And today, that path we walked without knowing it has become ours.</p>
+    `,
+    storyFianco: `
+      <p><strong>There are people who make the journey more beautiful, simply by walking beside us.</strong></p>
+      <p>There are people we meet along the way, and then there are those who have simply always been there.</p>
+      <p><strong>Donato and Rosa</strong>, you are this to us.</p>
+      <p>When we opened our eyes to the world, you were already there. Before memories, before words, even before we could understand what it meant to have someone beside us.</p>
+      <p>You were our older siblings, our first certainties, a presence that quietly crossed every season of our lives.</p>
+      <p>You saw us grow, change, fall, and start over. You knew many versions of us, kept pieces of our story, and shared those moments that, without knowing it, were leading us here.</p>
+      <p>And today, before one of the most important steps of our lives, we wanted one simple thing: to find you once again beside us.</p>
+      <p>Choosing you as witnesses does not only mean giving you a role on our wedding day. It means giving a special place in our future to those who have been part of our past from the very beginning.</p>
+      <p>Because there are presences that time doesn't need to explain.</p>
+      <p>There are bonds that don't need to be chosen to become a choice, every single day.</p>
+      <p>You were there at the beginning of our story. You will be there at the beginning of our new life. And there was perhaps no more beautiful way to tell you how important you are to us.</p>
+    `,
+    storySpeciale: `
+      <p><strong>There are bonds that grow with us, that time makes precious and that, in the most important moments, become part of our story.</strong></p>
+      <p>On such a special day, our nieces and nephews could not be missing: unique presences in our lives and keepers of a piece of our heart.</p>
+      <p><strong>Valeria, Daniela, Alisa, Monika, and Giorgia</strong> will be our bridesmaids. Five girls, five smiles that we wanted beside us to gently accompany one of the most emotional moments of our day.</p>
+      <p>Announcing that the long-awaited moment is finally arriving will be <strong>Fabio</strong>, our page boy. He will precede the bride and bridesmaids with a message just for the groom.</p>
+      <p>And then there is <strong>Francesco</strong>, to whom we have entrusted something small in size but immense in meaning: our wedding rings. He will keep them safe until the moment they become the symbol of the promise we are about to make to each other.</p>
+      <p>We wanted to give each of them a special place because when we remember this day, we want to remember them just like that: close to us, each with their own role, part of a moment we will carry forever in our souls.</p>
+      <p>Because there are affections that do not need grand words: it is enough to want them close when life gives us something unforgettable.</p>
+    `,
+    storyVoi: `
+      <p><strong>Because a special day only truly becomes special when shared with the people who matter.</strong></p>
+      <p>There are people who will have a special role on our day and others who will make it unique simply with their presence.</p>
+      <p>Each of you occupies an important place in our lives: friends, relatives, people met along the way who have remained, over time, part of our story.</p>
+      <p>We are lucky to be surrounded by so much sincere affection, different from each other but equally capable of leaving something precious in our lives.</p>
+      <p>And that is precisely why we strongly wished to have you with us: to share hugs, laughter, glances, and all those emotions that, together, will become memories.</p>
+      <p>Because this will be our day, but a part of its beauty will also be made by the people we have around us.</p>
+      <p>And if we chose to share it with you, it is because, each in your own way, you are part of our lives.</p>
+    `,
+    scattiTitle: "Your Photos",
+    scattiIntro: "There are moments that deserve to be lived fully, with your eyes and with your heart. Our greatest desire is to see you enjoy this day together with us, amidst emotions, hugs, and fun, without the worry of having to capture every moment: our wonderful photographer will take care of the official photos!<br><br>However, we know that the most authentic shots are often born suddenly, through the eyes of those who love us. If you capture a sincere laugh, a toast, or a special moment, we ask you to share it in our digital album. It will be wonderful, after the wedding, to relive this day also through your eyes and memories.<br><br>Below you will find all the instructions to upload photos and videos.",
+    scattiBtn: "Upload Photos & Videos"
   }
 };
 
@@ -184,17 +340,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 0. Language Switcher Logic
 function initLanguageSwitcher() {
-  const btn = document.getElementById('lang-btn');
-  if (!btn) return;
-
-  btn.addEventListener('click', () => {
-    const nextLang = btn.getAttribute('data-lang') === 'it' ? 'fr' : 'it';
-    setLanguage(nextLang);
+  const buttons = document.querySelectorAll('.language-selector-container .lang-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selectedLang = btn.getAttribute('data-lang');
+      setLanguage(selectedLang);
+    });
   });
 }
 
 function setLanguage(lang) {
   currentLang = lang;
+  
+  // Update active class on buttons
+  const buttons = document.querySelectorAll('.language-selector-container .lang-btn');
+  buttons.forEach(btn => {
+    if (btn.getAttribute('data-lang') === lang) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
   
   // Translate all elements with data-i18n attribute
   const elements = document.querySelectorAll('[data-i18n]');
@@ -215,14 +381,6 @@ function setLanguage(lang) {
   // Update dynamic document title
   document.title = TRANSLATIONS[lang].docTitle;
 
-  // Toggle flag & text on switcher button
-  const btn = document.getElementById('lang-btn');
-  if (btn) {
-    btn.setAttribute('data-lang', lang);
-    btn.querySelector('.flag-icon').textContent = lang === 'it' ? '🇫🇷' : '🇮🇹';
-    btn.querySelector('.lang-text').textContent = lang === 'it' ? 'FR' : 'IT';
-  }
-
   // Refresh success screen message if RSVP is saved
   const savedRSVP = localStorage.getItem('rsvp_enza_luciano_wedding');
   if (savedRSVP) {
@@ -235,6 +393,25 @@ function setLanguage(lang) {
         summaryText.innerHTML = TRANSLATIONS[lang].rsvpNoSummary;
       }
     }
+  }
+
+  // Update stories section tabs and active story dynamically based on the current tab
+  const activeTabBtn = document.querySelector('.tab-btn.active');
+  if (activeTabBtn) {
+    const tabName = activeTabBtn.getAttribute('data-tab');
+    const activeTabContent = document.querySelector('.tab-content.active');
+    if (activeTabContent) {
+      if (tabName === 'noi') activeTabContent.innerHTML = TRANSLATIONS[lang].storyNoi;
+      else if (tabName === 'fianco') activeTabContent.innerHTML = TRANSLATIONS[lang].storyFianco;
+      else if (tabName === 'speciale') activeTabContent.innerHTML = TRANSLATIONS[lang].storySpeciale;
+      else if (tabName === 'voi') activeTabContent.innerHTML = TRANSLATIONS[lang].storyVoi;
+    }
+  }
+
+  // Update photography album text dynamically
+  const scattiIntroEl = document.querySelector('.scatti-intro');
+  if (scattiIntroEl && TRANSLATIONS[lang].scattiIntro) {
+    scattiIntroEl.innerHTML = TRANSLATIONS[lang].scattiIntro;
   }
 }
 

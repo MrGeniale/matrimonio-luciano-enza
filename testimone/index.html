@@ -80,6 +80,13 @@
   </style>
 </head>
 <body>
+  <!-- Floating Language Selector -->
+  <div class="language-selector-container">
+    <button class="lang-btn active" data-lang="it">IT 🇮🇹</button>
+    <button class="lang-btn" data-lang="en">EN 🇬🇧</button>
+    <button class="lang-btn" data-lang="fr">FR 🇫🇷</button>
+  </div>
+
   <!-- Ambient background shapes same as main page -->
   <div class="decor-shape shape-1"></div>
   <div class="decor-shape shape-2"></div>
@@ -89,18 +96,18 @@
       <div class="surprise-card">
         <div class="monogram-logo"><span class="letter-l">L</span><span class="ampersand">&amp;</span><span class="letter-v">V</span></div>
         
-        <p class="surprise-text">
+        <p class="surprise-text" id="surprise-desc">
           Ci sono persone che rendono il viaggio più bello, semplicemente camminandoci accanto.<br>
           Persone che ci sono da sempre, pronte a condividere ogni gioia e ogni passo importante.
         </p>
 
         <div class="reveal-box">
-          <h2 class="question-title">Vuoi essere il nostro Testimone?</h2>
+          <h2 class="question-title" id="surprise-question">Vuoi essere il nostro Testimone?</h2>
           <div class="names-highlight">Donato</div>
-          <p class="surprise-text" style="font-size: 1.1rem; margin-bottom: 25px;">
+          <p class="surprise-text" id="surprise-sub" style="font-size: 1.1rem; margin-bottom: 25px;">
             Non potevamo immaginare questo giorno speciale senza di te al nostro fianco. ❤️
           </p>
-          <a href="https://api.whatsapp.com/send?phone=+393295658461&text=SI%20LO%20VOGLIO!%20%E2%9D%A4%EF%B8%8F%20Sar%C3%B2%20il%20vostro%20testimone!" target="_blank" class="btn-yes">SÌ, LO VOGLIO! ❤️</a>
+          <a href="https://api.whatsapp.com/send?phone=+393295658461&text=SI%20LO%20VOGLIO!%20%E2%9D%A4%EF%B8%8F%20Sar%C3%B2%20il%20vostro%20testimone!" target="_blank" id="surprise-btn" class="btn-yes">SÌ, LO VOGLIO! ❤️</a>
         </div>
 
         <!-- Footer -->
@@ -110,5 +117,45 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const TRANSLATIONS = {
+      it: {
+        title: "Una Sorpresa per Voi | L & V",
+        text1: "Ci sono persone che rendono il viaggio più bello, semplicemente camminandoci accanto.<br>Persone che ci sono da sempre, pronte a condividere ogni gioia e ogni passo importante.",
+        question: "Vuoi essere il nostro Testimone?",
+        sub: "Non potevamo immaginare questo giorno speciale senza di te al nostro fianco. ❤️",
+        btn: "SÌ, LO VOGLIO! ❤️"
+      },
+      en: {
+        title: "A Surprise for You | L & V",
+        text1: "There are people who make the journey more beautiful, simply by walking beside us.<br>People who have always been there, ready to share every joy and every important step.",
+        question: "Will you be our Witness?",
+        sub: "We couldn't imagine this special day without you by our side. ❤️",
+        btn: "YES, I DO! ❤️"
+      },
+      fr: {
+        title: "Une Surprise pour Vous | L & V",
+        text1: "Il y a des personnes qui rendent le voyage plus beau, simplement en marchant à nos côtés.<br>Des personnes qui ont toujours été là, prêtes à partager chaque joie et chaque étape importante.",
+        question: "Veux-tu être notre Témoin?",
+        sub: "Nous ne pouvions pas imaginer ce jour spécial sans toi à nos côtés. ❤️",
+        btn: "OUI, JE LE VEUX! ❤️"
+      }
+    };
+    
+    document.querySelectorAll('.language-selector-container .lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        document.querySelectorAll('.language-selector-container .lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        document.title = TRANSLATIONS[lang].title;
+        document.getElementById('surprise-desc').innerHTML = TRANSLATIONS[lang].text1;
+        document.getElementById('surprise-question').textContent = TRANSLATIONS[lang].question;
+        document.getElementById('surprise-sub').textContent = TRANSLATIONS[lang].sub;
+        document.getElementById('surprise-btn').textContent = TRANSLATIONS[lang].btn;
+      });
+    });
+  </script>
 </body>
 </html>
