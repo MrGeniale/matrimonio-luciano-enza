@@ -325,16 +325,46 @@ function initRSVP() {
 
   if (!form) return;
 
+  // Helper for menu options
+  function populateMenuOptions(typeSelect, menuSelect) {
+    const val = typeSelect.value;
+    menuSelect.innerHTML = '';
+    if (val === 'adult') {
+      menuSelect.innerHTML = `
+        <option value="Completo" selected>Completo</option>
+        <option value="Vegetariano">Vegetariano</option>
+        <option value="Vegano">Vegano</option>
+      `;
+    } else {
+      menuSelect.innerHTML = `
+        <option value="Menù Baby" selected>Menù Baby</option>
+        <option value="Solo posto a sedere">Solo posto a sedere</option>
+      `;
+    }
+  }
+
+  // Bind first guest
+  const mainTypeSelect = document.getElementById('main-guest-type');
+  const mainMenuSelect = document.getElementById('main-guest-menu');
+  if (mainTypeSelect && mainMenuSelect) {
+    mainTypeSelect.addEventListener('change', () => {
+      populateMenuOptions(mainTypeSelect, mainMenuSelect);
+    });
+  }
+
   // Toggle fields based on attendance choice (Yes/No)
   attendanceSelect.addEventListener('change', (e) => {
     const hasAllergiesChecked = document.querySelector('input[name="has-allergies"]:checked')?.value === 'yes';
+    const mainGuestOptions = document.getElementById('main-guest-options-group');
     if (e.target.value === 'no') {
       guestsGroup.classList.add('hidden');
+      if (mainGuestOptions) mainGuestOptions.classList.add('hidden');
       document.querySelector('input[name="has-allergies"][value="no"]').checked = true;
       document.querySelectorAll('input[name="has-allergies"]').forEach(el => el.disabled = true);
       dietGroup.classList.add('hidden');
     } else {
       guestsGroup.classList.remove('hidden');
+      if (mainGuestOptions) mainGuestOptions.classList.remove('hidden');
       document.querySelectorAll('input[name="has-allergies"]').forEach(el => el.disabled = false);
       if (hasAllergiesChecked) {
         dietGroup.classList.remove('hidden');
@@ -353,39 +383,71 @@ function initRSVP() {
     });
   });
 
+  // Dynamic guest fields (Name, Type, Menu)
+  const guestsCountInput = document.getElementById('guests-count');
+  const guestNamesContainer = document.getElementById('guest-names-container');
+
+  function updateGuestFields() {
+    const count = parseInt(guestsCountInput.value, 10);
+    
+    // Add fields if needed
+    while (guestNamesContainer.children.length < count - 1) {
+      const idx = guestNamesContainer.children.length + 2; // Guest 2, 3, etc.
+      const wrapper = document.createElement('div');
+      wrapper.className = 'guest-field-group';
+      wrapper.style.marginTop = '20px';
+      wrapper.style.borderTop = '1px dashed var(--red-light)';
+      wrapper.style.paddingTop = '15px';
+      
+      wrapper.innerHTML = `
+        <div class="form-group">
+          <label>Nome e Cognome Ospite ${idx}</label>
+          <input type="text" class="guest-name-input" placeholder="Inserisci il nome completo" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Tipo Ospite</label>
+            <select class="guest-type-select">
+              <option value="adult" selected>Adulto</option>
+              <option value="child">Bambino</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Scelta Menù</label>
+            <select class="guest-menu-select">
+              <option value="Completo" selected>Completo</option>
+              <option value="Vegetariano">Vegetariano</option>
+              <option value="Vegano">Vegano</option>
+            </select>
+          </div>
+        </div>
+      `;
+      
+      // Bind type select listener
+      const typeSel = wrapper.querySelector('.guest-type-select');
+      const menuSel = wrapper.querySelector('.guest-menu-select');
+      typeSel.addEventListener('change', () => {
+        populateMenuOptions(typeSel, menuSel);
+      });
+
+      guestNamesContainer.appendChild(wrapper);
+    }
+
+    // Remove extra fields if needed
+    while (guestNamesContainer.children.length > count - 1) {
+      guestNamesContainer.lastElementChild.remove();
+    }
+  }
+
+  guestsCountInput.addEventListener('input', updateGuestFields);
+  updateGuestFields();
+
   // Check for existing RSVP in localStorage
   const savedRSVP = localStorage.getItem('rsvp_enza_luciano_wedding');
   if (savedRSVP) {
     const data = JSON.parse(savedRSVP);
     showSuccessScreen(data);
   }
-
-  // Dynamic guest name fields
-  const guestsCountInput = document.getElementById('guests-count');
-  const guestNamesContainer = document.getElementById('guest-names-container');
-
-  function updateGuestNameFields() {
-    const count = parseInt(guestsCountInput.value, 10);
-    const currentFields = guestNamesContainer.children;
-
-    while (currentFields.length < count - 1) {
-      const i = currentFields.length + 1;
-      const wrapper = document.createElement('div');
-      wrapper.className = 'form-group guest-name-field';
-      wrapper.innerHTML = `
-        <label>Nome Ospite ${i + 1}</label>
-        <input type="text" class="guest-name-input" placeholder="Nome e cognome ospite ${i + 1}">
-      `;
-      guestNamesContainer.appendChild(wrapper);
-    }
-
-    while (currentFields.length > count - 1) {
-      currentFields[currentFields.length - 1].remove();
-    }
-  }
-
-  guestsCountInput.addEventListener('input', updateGuestNameFields);
-  updateGuestNameFields();
 
   // Handle Form Submission
   form.addEventListener('submit', (e) => {
@@ -398,13 +460,26 @@ function initRSVP() {
     const diet = (attendance === 'yes' && hasAllergies) ? document.getElementById('diet-requirements').value.trim() : '';
     const notes = document.getElementById('guest-notes').value.trim();
 
-    const guestNames = [];
-    guestNamesContainer.querySelectorAll('.guest-name-input').forEach(input => {
-      const val = input.value.trim();
-      if (val) guestNames.push(val);
-    });
+    const guestsList = [];
+    if (attendance === 'yes') {
+      // Main guest
+      const mainType = mainTypeSelect.value === 'adult' ? 'Adulto' : 'Bambino';
+      const mainMenu = mainMenuSelect.value;
+      guestsList.push({ name, type: mainType, menu: mainMenu });
 
-    const rsvpData = { name, attendance, hasAllergies, guestsCount, diet, notes, guestNames };
+      // Extra guests
+      const groups = guestNamesContainer.querySelectorAll('.guest-field-group');
+      groups.forEach(group => {
+        const extraName = group.querySelector('.guest-name-input').value.trim();
+        const extraType = group.querySelector('.guest-type-select').value === 'adult' ? 'Adulto' : 'Bambino';
+        const extraMenu = group.querySelector('.guest-menu-select').value;
+        if (extraName) {
+          guestsList.push({ name: extraName, type: extraType, menu: extraMenu });
+        }
+      });
+    }
+
+    const rsvpData = { name, attendance, hasAllergies, guestsCount, diet, notes, guestsList };
     localStorage.setItem('rsvp_enza_luciano_wedding', JSON.stringify(rsvpData));
 
     showSuccessScreen(rsvpData);
@@ -423,19 +498,41 @@ function initRSVP() {
       document.getElementById('guest-name').value = data.name;
       attendanceSelect.value = data.attendance;
       
+      const mainGuestOptions = document.getElementById('main-guest-options-group');
+
       if (data.attendance === 'no') {
         guestsGroup.classList.add('hidden');
+        if (mainGuestOptions) mainGuestOptions.classList.add('hidden');
         dietGroup.classList.add('hidden');
         document.querySelectorAll('input[name="has-allergies"]').forEach(el => el.disabled = true);
       } else {
         guestsCountInput.value = data.guestsCount;
-        updateGuestNameFields();
-        if (data.guestNames) {
-          const inputs = guestNamesContainer.querySelectorAll('.guest-name-input');
-          data.guestNames.forEach((gn, i) => {
-            if (inputs[i]) inputs[i].value = gn;
+        updateGuestFields();
+        
+        if (data.guestsList && data.guestsList.length > 0) {
+          // Pre-fill primary guest
+          const pGuest = data.guestsList[0];
+          if (mainTypeSelect) {
+            mainTypeSelect.value = pGuest.type === 'Adulto' ? 'adult' : 'child';
+            populateMenuOptions(mainTypeSelect, mainMenuSelect);
+            mainMenuSelect.value = pGuest.menu;
+          }
+
+          // Pre-fill extra guests
+          const groups = guestNamesContainer.querySelectorAll('.guest-field-group');
+          groups.forEach((group, i) => {
+            const guestData = data.guestsList[i + 1];
+            if (guestData) {
+              group.querySelector('.guest-name-input').value = guestData.name;
+              const typeSel = group.querySelector('.guest-type-select');
+              const menuSel = group.querySelector('.guest-menu-select');
+              typeSel.value = guestData.type === 'Adulto' ? 'adult' : 'child';
+              populateMenuOptions(typeSel, menuSel);
+              menuSel.value = guestData.menu;
+            }
           });
         }
+
         document.querySelectorAll('input[name="has-allergies"]').forEach(el => el.disabled = false);
         if (data.hasAllergies) {
           document.querySelector('input[name="has-allergies"][value="yes"]').checked = true;
@@ -446,6 +543,7 @@ function initRSVP() {
           dietGroup.classList.add('hidden');
         }
         guestsGroup.classList.remove('hidden');
+        if (mainGuestOptions) mainGuestOptions.classList.remove('hidden');
       }
       document.getElementById('guest-notes').value = data.notes;
     }
@@ -462,29 +560,31 @@ function initRSVP() {
     const t = TRANSLATIONS[currentLang];
 
     if (data.attendance === 'yes') {
-      message = t.waYesHeader;
-      message += `${t.waGuestLabel}${data.name}\n`;
-      if (data.guestNames && data.guestNames.length > 0) {
-        data.guestNames.forEach(gn => {
-          message += `${t.waGuestLabel}${gn}\n`;
+      message = `*Conferma di partecipazione al Matrimonio*\n\n`;
+      message += `Sì, confermiamo la presenza!\n\n`;
+      message += `*Dettagli Ospiti:*\n`;
+      if (data.guestsList && data.guestsList.length > 0) {
+        data.guestsList.forEach((g, idx) => {
+          message += `👤 Ospite ${idx + 1}: ${g.name} (${g.type} - Menù: ${g.menu})\n`;
         });
-      }
-      message += `${t.waCountLabel}${data.guestsCount} ${data.guestsCount > 1 ? t.waPersonPlural : t.waPersonSingular}\n`;
-      if (data.hasAllergies && data.diet) {
-        message += `${t.waAllergyLabel}${data.diet}\n`;
-      } else if (data.hasAllergies) {
-        message += `${t.waAllergyLabel}${t.waAllergyTbc}\n`;
       } else {
-        message += `${t.waAllergyLabel}${t.waAllergyNone}\n`;
+        message += `👤 Ospite 1: ${data.name}\n`;
+      }
+      message += `\n*Totale Persone:* ${data.guestsCount}\n`;
+      if (data.hasAllergies && data.diet) {
+        message += `⚠️ *Allergie/Intolleranze:* ${data.diet}\n`;
+      } else {
+        message += `⚠️ *Allergie/Intolleranze:* Nessuna\n`;
       }
       if (data.notes) {
-        message += `${t.waMsgLabel}"${data.notes}"\n`;
+        message += `✉️ *Note:* "${data.notes}"\n`;
       }
     } else {
-      message = t.waNoHeader;
-      message += `${t.waMsgFromLabel}${data.name}`;
+      message = `*Conferma di partecipazione al Matrimonio*\n\n`;
+      message += `Purtroppo non potrò esserci.\n\n`;
+      message += `Un caloroso abbraccio da: ${data.name}`;
       if (data.notes) {
-        message += `\n${t.waMsgLabel}"${data.notes}"`;
+        message += `\n✉️ *Messaggio:* "${data.notes}"`;
       }
     }
 
