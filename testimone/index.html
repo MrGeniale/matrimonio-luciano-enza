@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Una Sorpresa per Voi | L & V</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    .surprise-card {
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeInUp 1.5s ease-out;
+    }
+    .surprise-title {
+      font-family: var(--font-cursive);
+      font-size: 5rem;
+      color: var(--red-primary);
+      margin-bottom: 20px;
+    }
+    .surprise-text {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: var(--text-primary);
+      margin-bottom: 25px;
+    }
+    .reveal-box {
+      border: 2px dashed var(--gold-accent);
+      padding: 30px 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.4);
+      margin-top: 30px;
+    }
+    .question-title {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--red-dark);
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .names-highlight {
+      font-family: var(--font-cursive);
+      font-size: 3.5rem;
+      color: var(--red-primary);
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+    .btn-yes {
+      display: inline-block;
+      background: var(--red-primary);
+      color: white;
+      padding: 12px 35px;
+      border-radius: 30px;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      box-shadow: 0 6px 15px rgba(176, 27, 46, 0.2);
+      transition: var(--transition-smooth);
+      border: none;
+      cursor: pointer;
+    }
+    .btn-yes:hover {
+      background: var(--red-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(176, 27, 46, 0.35);
+      color: white;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient background shapes same as main page -->
+  <div class="decor-shape shape-1"></div>
+  <div class="decor-shape shape-2"></div>
+
+  <div class="app-container" style="max-width: 600px; padding: 20px;">
+    <div class="physical-card-wrap">
+      <div class="surprise-card">
+        <div class="surprise-title">L & V</div>
+        
+        <p class="surprise-text">
+          Ci sono persone che rendono il viaggio più bello, semplicemente camminandoci accanto.<br>
+          Persone che ci sono da sempre, pronte a condividere ogni gioia e ogni passo importante.
+        </p>
+
+        <div class="reveal-box">
+          <h2 class="question-title">Volete essere i nostri Testimoni?</h2>
+          <div class="names-highlight">Donato &amp; Rosa</div>
+          <p class="surprise-text" style="font-size: 1.1rem; margin-bottom: 25px;">
+            Non potevamo immaginare questo giorno speciale senza di voi al nostro fianco. ❤️
+          </p>
+          <a href="https://api.whatsapp.com/send?phone=+393295658561&text=SI%20LO%20VOGLIO!%20%E2%9D%A4%EF%B8%8F%20Saremo%20i%20vostri%20testimoni!" target="_blank" class="btn-yes">SÌ, LO VOGLIO! ❤️</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
