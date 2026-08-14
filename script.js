@@ -60,7 +60,58 @@ const TRANSLATIONS = {
     waAllergyNone: "Nessuna",
     waAllergyTbc: "Sì (da concordare)",
     waMsgLabel: "📝 Messaggio: ",
-    waMsgFromLabel: "👤 Da parte di: "
+    waMsgFromLabel: "👤 Da parte di: ",
+    storiesTitle: "Le Nostre Storie",
+    tabNoi: "💖 Noi",
+    tabFianco: "🤝 Al nostro fianco",
+    tabSpeciale: "✨ Un posto speciale",
+    tabVoi: "👥 Voi",
+    storyNoi: `
+      <p><strong>A volte non serve cambiare strada, basta solo iniziare a percorrerla insieme.</strong></p>
+      <p>Per quasi quattro anni siamo stati lì, a pochi passi l’uno dall’altra. Lavoravamo nello stesso stabile, ci vedevamo quasi ogni giorno, ci conoscevamo. Le nostre giornate si incrociavano tra corridoi e piccoli gesti quotidiani. La strada, in fondo, era già la stessa. Semplicemente, non avevamo ancora iniziato a percorrerla insieme.</p>
+      <p>Luciano, con il suo modo gentile e discreto, cercava piccole occasioni per avvicinarsi a Enza: la posta da portare, qualche sorriso in più, qualche invito a bere qualcosa; ma certe storie hanno semplicemente bisogno del loro tempo.</p>
+      <p>Poi è arrivato un momento diverso. Uno di quelli in cui, senza bisogno di tante parole, si riesce a vedere oltre ciò che si mostra. È bastato un messaggio, un’attenzione sincera, per farci iniziare a guardare con occhi nuovi qualcosa che era stato davanti a noi per anni.</p>
+      <p>Da lì sono arrivati gli sguardi all’uscita dal lavoro, i messaggi, la voglia di cercarsi e, finalmente, di conoscersi davvero.</p>
+      <p>Poco alla volta ci siamo scoperti e scelti. Ci hanno uniti la dolcezza dei piccoli gesti, la cura, la complicità e quella capacità di portare luce nelle giornate dell’altro.</p>
+      <p>E pensare che il principe azzurro Enza lo immaginava in tutt’altro modo, di certo non con una divisa da lavoro azzurra.🤣</p>
+      <p>E invece era già lì, a pochi passi.</p>
+      <p>Per anni abbiamo condiviso gli stessi luoghi senza sapere che un giorno avremmo condiviso molto di più. Poi è arrivato il momento giusto: abbiamo iniziato a guardarci davvero, a sceglierci e a camminare nella stessa direzione.</p>
+      <p>E oggi, quella strada che percorrevamo già senza saperlo, è diventata la nostra.</p>
+    `,
+    storyFianco: `
+      <p><strong>Ci sono persone che rendono il viaggio più bello, semplicemente camminandoci accanto.</strong></p>
+      <p>Ci sono persone che incontriamo lungo il cammino, e poi ci sono quelle che, semplicemente, ci sono da sempre.</p>
+      <p><strong>Donato e Rosa</strong>, voi siete questo per noi.</p>
+      <p>Quando abbiamo aperto gli occhi sul mondo, eravate già lì. Prima dei ricordi, prima delle parole, prima ancora che potessimo comprendere il significato di avere qualcuno accanto.</p>
+      <p>Siete stati i nostri fratelli maggiori, le nostre prime certezze, una presenza che ha attraversato silenziosamente ogni stagione della nostra vita.</p>
+      <p>Ci avete visti crescere, cambiare, cadere e ricominciare. Avete conosciuto tante versioni di noi, custodito pezzi della nostra storia e condiviso quei momenti che, senza saperlo, ci stavano conducendo fino a qui.</p>
+      <p>E oggi, davanti a uno dei passi più importanti della nostra vita, abbiamo desiderato una cosa semplice: ritrovarvi ancora una volta accanto a noi.</p>
+      <p>Scegliervi come testimoni non significa soltanto affidarvi un ruolo nel giorno del nostro matrimonio. Significa dare un posto speciale, nel nostro futuro, a chi ha fatto parte del nostro passato fin dal principio.</p>
+      <p>Perché ci sono presenze che il tempo non deve spiegare.</p>
+      <p>Ci sono legami che non hanno bisogno di essere scelti per diventare una scelta, ogni giorno.</p>
+      <p>C’eravate all’inizio della nostra storia. Ci sarete all’inizio della nostra nuova vita. E forse non poteva esserci modo più bello di dirvi quanto siete importanti per noi.</p>
+    `,
+    storySpeciale: `
+      <p><strong>Ci sono legami che crescono con noi, che il tempo rende preziosi e che, nei momenti più importanti, diventano parte della nostra storia.</strong></p>
+      <p>In un giorno così speciale non potevano mancare i nostri nipoti: presenze uniche nelle nostre vite e custodi di un pezzo del nostro cuore.</p>
+      <p><strong>Valeria, Daniela, Alisa, Monika e Giorgia</strong> saranno le nostre damigelle. Cinque ragazze, cinque sorrisi che abbiamo voluto accanto a noi per accompagnare con dolcezza uno dei momenti più emozionanti del nostro giorno.</p>
+      <p>Ad annunciare che quel momento tanto atteso sta finalmente arrivando ci penserà <strong>Fabio</strong>, il nostro paggetto. Sarà lui a precedere la sposa e le damigelle con un messaggio tutto per lo zio.</p>
+      <p>E poi c’è <strong>Francesco</strong>, al quale abbiamo affidato qualcosa di piccolo nelle dimensioni, ma immenso nel significato: le nostre fedi. Sarà lui a custodirle fino al momento in cui diventeranno il simbolo della promessa che stiamo per farci.</p>
+      <p>Abbiamo voluto dare a ciascuno di loro un posto speciale perché, quando ricorderemo questo giorno, vogliamo ricordarli proprio così: vicini a noi, ognuno con il proprio ruolo, partecipi di un momento che porteremo per sempre nell'anima.</p>
+      <p>Perché ci sono affetti che non hanno bisogno di grandi parole: basta desiderarli accanto quando la vita ci regala qualcosa di indimenticabile.</p>
+    `,
+    storyVoi: `
+      <p><strong>Perché un giorno speciale lo diventa davvero solo quando è condiviso con le persone che contano.</strong></p>
+      <p>Ci sono persone che avranno un ruolo speciale nel nostro giorno e altre che lo renderanno unico semplicemente con la loro presenza.</p>
+      <p>Ognuno di voi occupa un posto importante nella nostra vita: amici, parenti, persone incontrate lungo il cammino e rimaste, nel tempo, parte della nostra storia.</p>
+      <p>Siamo fortunati a essere circondati da tanti affetti sinceri, diversi tra loro ma ugualmente capaci di lasciare qualcosa di prezioso nelle nostre vite.</p>
+      <p>Ed è proprio per questo che abbiamo desiderato fortemente avervi con noi: per condividere gli abbracci, le risate, gli sguardi e tutte quelle emozioni che, insieme, diventeranno ricordi.</p>
+      <p>Perché questo sarà il nostro giorno, ma una parte della sua bellezza sarà fatta anche dalle persone che avremo intorno.</p>
+      <p>E se abbiamo scelto di condividerlo con voi, è perché, ognuno a suo modo, siete parte della nostra vita.</p>
+    `,
+    scattiTitle: "I Vostri Scatti",
+    scattiIntro: "Ci sono momenti che meritano di essere vissuti appieno, con gli occhi e con il cuore. Il nostro desiderio più grande è vedervi godere questa giornata insieme a noi, tra emozioni, abbracci e divertimento, senza la preoccupazione di dover immortalare ogni istante: alle foto ufficiali, infatti, penserà il nostro meraviglioso fotografo!<br><br>Sappiamo però che gli scatti più autentici nascono spesso all'improvviso, attraverso lo sguardo di chi ci vuole bene. Se catturerete una risata sincera, un brindisi o un momento speciale, vi chiediamo di condividerlo nel nostro album digitale. Sarà meraviglioso, dopo il matrimonio, rivivere questo giorno anche attraverso i vostri occhi e i vostri ricordi.<br><br>Qui sotto troverete tutte le indicazioni per caricare foto e video.",
+    scattiBtn: "Carica Foto e Video"
   },
   fr: {
     docTitle: "Le Mariage de Luciano & Vincenza | Invitation Officielle",
@@ -128,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   initRSVP();
   initSmoothScroll();
+  initStoriesAndAlbum();
 });
 
 // 0. Language Switcher Logic
@@ -485,5 +537,35 @@ function sendToWebhook(data) {
     .catch(error => {
       console.error("Errore durante l'invio al Webhook:", error);
     });
+  }
+}
+
+// 9. Interactive Stories Tabs and Photo Album Binding
+function initStoriesAndAlbum() {
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+      button.classList.add('active');
+      const targetTab = button.getAttribute('data-tab');
+      const activeContent = document.getElementById(`tab-${targetTab}`);
+      if (activeContent) {
+        activeContent.classList.add('active');
+      }
+    });
+  });
+
+  const albumBtn = document.getElementById('scatti-album-btn');
+  if (albumBtn) {
+    if (EVENT_CONFIG.albumUrl && EVENT_CONFIG.albumUrl !== '#') {
+      albumBtn.href = EVENT_CONFIG.albumUrl;
+    } else {
+      albumBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Il link per caricare le foto sarà attivo il giorno del matrimonio! 📸');
+      });
+    }
   }
 }

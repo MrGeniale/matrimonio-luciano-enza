@@ -29,6 +29,7 @@ const EVENT_CONFIG = {
   },
   dressCode: "Nessun dress code: la libertà è l'abito migliore che possiate indossare!",
   rsvpDeadlineFormatted: "30 Novembre 2026",
-  rsvpWebhookUrl: ""
+  rsvpWebhookUrl: "",
+  albumUrl: "#" // Inserisci qui il link di Google Foto o dell'album digitale condiviso
 };
 export default EVENT_CONFIG;
