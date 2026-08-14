@@ -174,13 +174,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.15em;
 }
 .monogram-logo .ampersand {
-  margin-left: -0.02em;
-  margin-right: -0.08em;
+  font-size: 0.85em; /* Rende la ampersand leggermente più piccola per eleganza */
 }
 .monogram-logo .letter-v {
-  margin-left: -0.08em;
+  margin-left: -0.04em; /* Compensazione minima per l'inclinazione della V */
 }
 
 .celebrant-names-grid {
