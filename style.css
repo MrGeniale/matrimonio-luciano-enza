@@ -6,7 +6,7 @@
 :root {
   /* Colors */
   --bg-color: #FDFCFA;         /* Clean Soft White / Silk */
-  --card-bg: rgba(255, 255, 255, 0.9); /* Solid premium card background */
+  --card-bg: rgba(255, 255, 255, 0.58); /* Solid premium card background */
   --red-primary: #B01B2E;      /* Crimson Red from the card */
   --red-dark: #7D0B1B;         /* Deep Wine/Burgundy Red */
   --red-light: #E6B5BA;        /* Soft Rosy Accent */
@@ -41,7 +41,7 @@ html {
 
 body {
   background-color: #F5F2EC;
-  background-image: linear-gradient(rgba(245, 242, 236, 0.78), rgba(245, 242, 236, 0.78)), url('assets/hero.png');
+  background-image: linear-gradient(rgba(245, 242, 236, 0.45), rgba(245, 242, 236, 0.45)), url('assets/hero.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -141,7 +141,7 @@ body {
 
 /* Physical Card Wrap Style matching the images */
 .physical-card-wrap {
-  background: rgba(253, 252, 250, 0.85);
+  background: rgba(253, 252, 250, 0.58);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 2px solid var(--red-primary);
