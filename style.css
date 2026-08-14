@@ -41,7 +41,7 @@ html {
 
 body {
   background-color: #F5F2EC;
-  background-image: linear-gradient(rgba(245, 242, 236, 0.88), rgba(245, 242, 236, 0.88)), url('assets/hero.png');
+  background-image: linear-gradient(rgba(245, 242, 236, 0.78), rgba(245, 242, 236, 0.78)), url('assets/hero.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -141,7 +141,9 @@ body {
 
 /* Physical Card Wrap Style matching the images */
 .physical-card-wrap {
-  background: var(--bg-color);
+  background: rgba(253, 252, 250, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 2px solid var(--red-primary);
   border-radius: 8px;
   padding: 40px 30px;
