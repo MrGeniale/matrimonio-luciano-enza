@@ -3,7 +3,7 @@ const EVENT_CONFIG = {
   eventDate: "2026-12-31T15:30:00", // Formato ISO per il conto alla rovescia (31 Dicembre 2026, 15:30)
   eventDateFormatted: "Giovedì 31 Dicembre 2026, ore 15:30",
   calendarUrl: "https://www.google.com/calendar/render?action=TEMPLATE&text=Matrimonio+di+Luciano+ed+Enza&dates=20261231T143000Z%2F20261231T233000Z&details=Festeggiate+con+noi+il+nostro+matrimonio%21+Ricordatevi+di+dare+conferma+sul+sito.&location=Chiesa+Maria+S.S.+del+Monte+Carmelo%2C+Martina+Franca+TA",
-  whatsAppPhone: "+393295658561", // WhatsApp di Vincenza per RSVP
+  whatsAppPhone: "+393295658461", // WhatsApp di Vincenza per RSVP
   location: {
     name: "Abbazia San Lorenzo",
     address: "Contrada Sant'Angelo 5, Fasano (Br)",
@@ -24,7 +24,7 @@ const EVENT_CONFIG = {
     },
     vincenza: {
       name: "Vincenza Gioia",
-      phone: "+393295658561"
+      phone: "+393295658461"
     }
   },
   dressCode: "Nessun dress code: la libertà è l'abito migliore che possiate indossare!",
