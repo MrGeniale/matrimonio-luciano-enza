@@ -80,11 +80,17 @@
   </style>
 </head>
 <body>
-  <!-- Floating Language Selector -->
-  <div class="language-selector-container">
-    <button class="lang-btn active" data-lang="it">IT 🇮🇹</button>
-    <button class="lang-btn" data-lang="en">EN 🇬🇧</button>
-    <button class="lang-btn" data-lang="fr">FR 🇫🇷</button>
+  <!-- Floating Language Selector Dropdown -->
+  <div class="language-dropdown" id="lang-dropdown">
+    <button class="dropdown-trigger">
+      <span class="current-lang-text">IT 🇮🇹</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="dropdown-options">
+      <button class="dropdown-opt active" data-lang="it">IT 🇮🇹</button>
+      <button class="dropdown-opt" data-lang="en">EN 🇬🇧</button>
+      <button class="dropdown-opt" data-lang="fr">FR 🇫🇷</button>
+    </div>
   </div>
 
   <!-- Ambient background shapes same as main page -->
@@ -143,18 +149,37 @@
       }
     };
     
-    document.querySelectorAll('.language-selector-container .lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
-        document.querySelectorAll('.language-selector-container .lang-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+    const dropdown = document.getElementById('lang-dropdown');
+    const trigger = dropdown.querySelector('.dropdown-trigger');
+    const options = dropdown.querySelectorAll('.dropdown-opt');
+    const currentText = dropdown.querySelector('.current-lang-text');
+    
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle('open');
+    });
+    
+    options.forEach(opt => {
+      opt.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const lang = opt.getAttribute('data-lang');
+        currentText.innerHTML = opt.innerHTML;
+        
+        options.forEach(o => o.classList.remove('active'));
+        opt.classList.add('active');
         
         document.title = TRANSLATIONS[lang].title;
         document.getElementById('surprise-desc').innerHTML = TRANSLATIONS[lang].text1;
         document.getElementById('surprise-question').textContent = TRANSLATIONS[lang].question;
         document.getElementById('surprise-sub').textContent = TRANSLATIONS[lang].sub;
         document.getElementById('surprise-btn').textContent = TRANSLATIONS[lang].btn;
+        
+        dropdown.classList.remove('open');
       });
+    });
+    
+    document.addEventListener('click', () => {
+      dropdown.classList.remove('open');
     });
   </script>
 </body>

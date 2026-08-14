@@ -12,11 +12,17 @@
 </head>
 <body>
 
-  <!-- Floating Language Selector -->
-  <div class="language-selector-container">
-    <button class="lang-btn active" data-lang="it">IT 🇮🇹</button>
-    <button class="lang-btn" data-lang="en">EN 🇬🇧</button>
-    <button class="lang-btn" data-lang="fr">FR 🇫🇷</button>
+  <!-- Floating Language Selector Dropdown -->
+  <div class="language-dropdown" id="lang-dropdown">
+    <button class="dropdown-trigger">
+      <span class="current-lang-text">IT 🇮🇹</span>
+      <span class="arrow">▼</span>
+    </button>
+    <div class="dropdown-options">
+      <button class="dropdown-opt active" data-lang="it">IT 🇮🇹</button>
+      <button class="dropdown-opt" data-lang="en">EN 🇬🇧</button>
+      <button class="dropdown-opt" data-lang="fr">FR 🇫🇷</button>
+    </div>
   </div>
   <!-- Background Decorative Shapes -->
   <div class="decor-shape shape-1"></div>
