@@ -41,6 +41,11 @@ html {
 
 body {
   background-color: #F5F2EC;
+  background-image: linear-gradient(rgba(245, 242, 236, 0.88), rgba(245, 242, 236, 0.88)), url('assets/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--text-primary);
   font-family: var(--font-sans);
   line-height: 1.6;
