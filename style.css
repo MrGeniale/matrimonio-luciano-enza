@@ -41,11 +41,6 @@ html {
 
 body {
   background-color: #F5F2EC;
-  background-image: linear-gradient(rgba(245, 242, 236, 0.45), rgba(245, 242, 236, 0.45)), url('assets/hero.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   color: var(--text-primary);
   font-family: var(--font-sans);
   line-height: 1.6;
@@ -54,6 +49,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(245, 242, 236, 0.45), rgba(245, 242, 236, 0.45)), url('assets/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  z-index: -3;
+  pointer-events: none;
 }
 
 /* Background Ambient Blur */
