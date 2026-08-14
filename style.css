@@ -185,21 +185,25 @@ body::before {
 
 .monogram-logo {
   font-family: var(--font-cursive);
-  font-size: 5rem;
+  font-size: 5.5rem;
   color: var(--red-primary);
-  line-height: 1;
+  line-height: 1.2;
   margin-bottom: 20px;
   animation: fadeIn 1.5s ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.15em;
+}
+.monogram-logo .letter-l {
+  transform: translateY(-0.16em);
+  margin-right: 0.08em;
 }
 .monogram-logo .ampersand {
-  font-size: 0.85em; /* Rende la ampersand leggermente più piccola per eleganza */
+  font-size: 0.85em;
+  margin-right: 0.12em;
 }
 .monogram-logo .letter-v {
-  margin-left: -0.04em; /* Compensazione minima per l'inclinazione della V */
+  transform: translateY(0.16em);
 }
 
 .celebrant-names-grid {
