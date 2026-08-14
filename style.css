@@ -568,7 +568,7 @@ body::before {
 }
 .footer-note {
   font-size: 0.75rem !important;
-  color: var(--red-light) !important;
+  color: var(--red-primary) !important;
   margin-top: 5px;
 }
 
